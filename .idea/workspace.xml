@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1b923b3b-2b9f-496e-a16d-7cfc5d543f9e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/bootstrap-datetimepicker-master/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="gate_pass" />
+  </component>
+  <component name="ProjectId" id="1VtFi45OSA4DNhiRkSlETzCg82B" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\expense" />
+      <recent name="C:\wamp\www\gate_pass" />
+      <recent name="C:\wamp\www\pj_transport" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b923b3b-2b9f-496e-a16d-7cfc5d543f9e" name="Default Changelist" comment="" />
+      <created>1567610723970</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567610723970</updated>
+      <workItem from="1567610726061" duration="705000" />
+      <workItem from="1567650028783" duration="2700000" />
+      <workItem from="1567661397013" duration="1535000" />
+      <workItem from="1567664335401" duration="878000" />
+      <workItem from="1567683915176" duration="138000" />
+      <workItem from="1567685918187" duration="4252000" />
+      <workItem from="1567763861895" duration="9803000" />
+      <workItem from="1567849686569" duration="9741000" />
+      <workItem from="1568007020476" duration="5863000" />
+      <workItem from="1568023027576" duration="11077000" />
+      <workItem from="1568066932565" duration="6496000" />
+      <workItem from="1568097821274" duration="9817000" />
+      <workItem from="1568115187440" duration="593000" />
+      <workItem from="1568273275595" duration="155000" />
+      <workItem from="1568274594326" duration="193000" />
+      <workItem from="1568475130242" duration="601000" />
+      <workItem from="1578064613766" duration="13082000" />
+      <workItem from="1578108444647" duration="934000" />
+      <workItem from="1578117029279" duration="2071000" />
+      <workItem from="1578120147436" duration="2982000" />
+      <workItem from="1579847126526" duration="8178000" />
+      <workItem from="1579886187054" duration="295000" />
+      <workItem from="1579931769635" duration="1206000" />
+      <workItem from="1579938497390" duration="9767000" />
+      <workItem from="1579999045342" duration="115000" />
+      <workItem from="1606143863891" duration="2672000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
