@@ -17,7 +17,6 @@ if ($type == 'delete') {
     if (isset($_POST['submit_sender'])) {
         $id = $_POST['id'];
 
-
         $Name = $_POST['Name'];
         $Address = $_POST['Address'];
         $City = $_POST['City'];
@@ -41,14 +40,16 @@ if ($type == 'delete') {
             mysqli_query($conn, "INSERT INTO `company`(`Name`, `Address`, `City`, `State`, `State_Code`, `Pin_Code`, `Mobile_No`, `alternate_Mobile_No`, `E_mail`, `Website`) VALUES ('$Name','$Address','$City','$State','$State_Code','$Pin_Code','$Mobile_No','$alternate_Mobile_No','$E_mail','$Website')");
 
             $sql1 = "INSERT INTO `company_employee`(`employee_name`, `employee_number`, `employee_email`, `employee_designation`, `employee_ref_id`) VALUES ";
+            
+            
+
+
+
             $rows = [];
-
             $cmp_id = mysqli_fetch_assoc(mysqli_query($conn, "select max(`id`) as `id` from `company`"))['id'];
-
             for ($i = 0; $i < count($_POST["employee_name"]); $i++) {
                 $rows[] = "( '{$_POST["employee_name"][$i]}','{$_POST["employee_number"][$i]}','{$_POST["employee_email"][$i]}','{$_POST["employee_designation"][$i]}','{$cmp_id}' )";
             }
-
             $sql1 .= implode(",", $rows);
             if ($conn->query($sql1)) {
                 echo '<script>

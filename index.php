@@ -42,7 +42,12 @@ if(isset($_POST['submit']))
 }
 ?>
 
-<body class="login-page">
+<body class="login-page" style="
+    background: url(images/bg.jpg)!important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+">
 
 <!-- pre loader -->
 <div class="loader-container">

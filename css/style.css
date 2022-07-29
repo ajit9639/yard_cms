@@ -7807,12 +7807,16 @@ background: #5a9de2!important;
   color: #2196F3; }
 
 /* Login Page ================================== */
-.login-box {
-  background-color: #ffffff;
-  padding-left: 0;
-  max-width: 360px;
-  margin: 5% auto;
-  overflow-x: hidden; }
+
+  .login-box {
+    background-color: #79e5c8eb;
+    padding: 0px 27px;
+    max-width: 360px;
+    margin: 5% auto;
+    overflow-x: hidden;
+    text-align: center;
+}
+
   .login-page .login-box .msg {
     color: #555;
     margin-bottom: 30px;
@@ -7824,6 +7828,7 @@ background: #5a9de2!important;
   .login-page .login-box .logo {
     /*margin-left: 4%;*/
     padding: 5px;
+    text-align: center;
  }
     .login-page .login-box .logo a {
       font-size: 36px;
@@ -8524,7 +8529,8 @@ font-size: 12px!important;
 
 @media(min-width:576px){
   .form-group .form-line{
-    width: 48%;
+    /* width: 48%; */
+    width: 23%;
     float:left;
     margin:10px;
   }
@@ -8534,4 +8540,20 @@ font-size: 12px!important;
   #card{
     margin-left: 200px!important;
   }
+}
+
+/* ===================== */
+
+.headline .title{
+  margin:0px!important;
+  font-size: 20px;
+}
+
+
+.vehicle-out .col-sm-6{
+    border: 1px solid #fff;
+}
+
+table th{
+  text-align: center;
 }

@@ -19,8 +19,8 @@
         <!-- Menu -->
         <div class="menu">
             <ul class="list">
-                <li class="header">MAIN NAVIGATION 
-                <!-- <span class="closebtn website" onclick="closeNav2()" style="
+                <li class="header">MAIN NAVIGATION
+                    <!-- <span class="closebtn website" onclick="closeNav2()" style="
                 position: absolute;
                 right: 15px;
                 font-size: 20px;
@@ -147,12 +147,6 @@
                     </ul>
                 </li>
 
-
-
-
-
-
-
                 <?php
                 $access_array=$_SESSION['access_array'];
                 $role=$_SESSION['type'];
@@ -173,7 +167,7 @@
                     if(($role == 'A') || (in_array('12',$access_array))) { ?>
                         <li>
 
-                            <a href="user_list.php">
+                            <a href="rake.php">
                                 <i class="material-icons">person</i>
                                 <span>Rake Opening</span>
                             </a>
@@ -182,9 +176,18 @@
                         <?php
                         if(($role == 'A') || (in_array('13',$access_array))) { ?>
                         <li>
-                            <a href="company.php">
-                                <i class="material-icons">domain</i>
+                            <a href="unloading_checkpost1.php">
+                                <i class="material-icons">accessibility</i>
                                 <span>Checkpost No.1</span>
+                            </a>
+                        </li>
+                        <?php } ?>
+                        <?php
+                        if(($role == 'A') || (in_array('14',$access_array))) { ?>
+                        <li>
+                            <a href="unloading_kata_entry.php">
+                                <i class="material-icons">create</i>
+                                <span>Kata Entry</span>
                             </a>
                         </li>
                         <?php } ?>
@@ -197,10 +200,8 @@
                             </a>
                         </li>
                         <?php } ?>
-                       
                     </ul>
                 </li>
-
 
 
                 <?php
@@ -223,7 +224,7 @@
                     if(($role == 'A') || (in_array('15',$access_array))) { ?>
                         <li>
 
-                            <a href="user_list.php">
+                            <a href="loading_rake_opening.php">
                                 <i class="material-icons">person</i>
                                 <span>Rake Opening</span>
                             </a>
@@ -232,16 +233,23 @@
                         <?php
                         if(($role == 'A') || (in_array('16',$access_array))) { ?>
                         <li>
-                            <a href="company.php">
-                                <i class="material-icons">domain</i>
+                            <a href="loading_checkpost1.php">
+                                <i class="material-icons">accessibility</i>
                                 <span>Checkpost No.1</span>
                             </a>
                         </li>
                         <?php } ?>
-                        
+
                     </ul>
                 </li>
 
+
+                <li>
+                    <a href="logout.php">
+                        <i class="material-icons">keyboard_tab</i>
+                        <span>Logout</span>
+                    </a>
+                </li>
 
 
 
@@ -254,19 +262,18 @@
                     </a>
                 </li> -->
                 <?php //  } ?>
-
-                
             </ul>
 
         </div>
         <!-- #Menu -->
         <!-- Footer -->
-        <!-- <div class="legal">
+        <div class="legal">
             <div class="copyright">
-                &copy; Copyright 2020 <br><a href="https://insightinfosystem.com/" target="_blank">Insight Infosystem Pvt. Ltd.</a>
+                &copy; Copyright 2022 <br><a href="https://insightinfosystem.com/" target="_blank">Insight Infosystem
+                    Pvt. Ltd.</a>
             </div>
 
-        </div> -->
+        </div>
         <!-- #Footer -->
     </aside>
     <!-- #END# Left Sidebar -->
