@@ -68,7 +68,7 @@ if(isset($_GET['id']))
                     <div class="card" id="card">
                         <div class="header">
                             <h2 class="text-center">
-                                Add Material
+                                Add Box Type
                             </h2>
 
                         </div>

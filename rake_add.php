@@ -1,103 +1,81 @@
 <?php
 include_once('includes/header.php');
 include_once('includes/check_login.php');
-
-$id=$_GET['id'];
+include_once('includes/footer.php');
+$id = $_GET['id'];
 echo $type = $_GET['type'];
 
-if($type == 'delete'){
-$del = mysqli_query($conn, "DELETE FROM `unloading_rake_opening` WHERE `id`='$id'");
-if($del){
-    echo "<script>alert('Data Deleted Successfully');window.location='rake.php';</script>";
-}else{
-    echo "<script>alert('Data Deleted Failed');</script>";
-}
-}else{
+if ($type == 'delete') {
+    $del = mysqli_query($conn, "DELETE FROM `unloading_rake_opening` WHERE `id`='$id'");
+    if ($del) {
+        echo "<script>alert('Data Deleted Successfully');window.location='rake.php';</script>";
+    } else {
+        echo "<script>alert('Data Deleted Failed');</script>";
+    }
+} else {
 
-if(isset($_POST['submit_sender']))
-{
+    if (isset($_POST['submit_sender'])) {
+        // echo "<pre>";
+        // print_r($_POST);
+        // exit();
 
-    // echo "<pre>";
-    // print_r($_POST);
-    // exit();
-
-$id=$_POST['id'];    
-$RR_No = $_POST['RR_No'];
-$RR_Qty = $_POST['RR_Qty'];
-$RR_Date = $_POST['RR_Date'];
-$Placement_Time = $_POST['Placement_Time'];
-$Material = $_POST['Material'];
-$Company = $_POST['Company'];
-$Transporter = $_POST['Transporter'];
-$Box_Type = $_POST['Box_Type'];
-$Billing_Head = $_POST['Billing_Head'];
-$Remarks = $_POST['Remarks'];
-$Total_Box = $_POST['Total_Box'];
-       
-if ($id == '') {
-            mysqli_query($conn, "INSERT INTO `unloading_rake_opening`(`RR_No`, `RR_Qty`, `RR_Date`, `Placement_Time`, `Material`, `Company`, `Transporter`, `Box_Type`, `Billing_Head`, `Remarks`, `Total_Box`,`rake_status`) VALUES ('$RR_No','$RR_Qty','$RR_Date','$Placement_Time','$Material','$Company','$Transporter','$Box_Type','$Billing_Head','$Remarks','$Total_Box','close')");
-            // $id = mysqli_insert_id($conn);
-            $sql1 = "INSERT INTO `box_entry`(`employee_name`, `employee_number`, `employee_email`, `employee_designation`, `employee_ref_id`) VALUES ";
+        $id = $_POST['id'];
+        $RR_No = $_POST['RR_No'];
+        $RR_Qty = $_POST['RR_Qty'];
+        $RR_Date = $_POST['RR_Date'];
+        $Placement_Time = $_POST['Placement_Time'];
+        $Material = $_POST['Material'];
+        $Company = $_POST['Company'];
+        $Transporter = $_POST['Transporter'];
+        $Box_Type = $_POST['Box_Type'];
+        $Billing_Head = $_POST['Billing_Head'];
+        $Remarks = $_POST['Remarks'];
+        $Total_Box = $_POST['box_no_count'];
+        $cntt = 0;
+        if ($id == '') {
             
             
-
-
-
+            $d = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `unloading_rake_opening` ORDER BY id DESC"));
+            $e = $d['id'] + 1;
+            
+            mysqli_query($conn, "INSERT INTO `unloading_rake_closing`(`rake_opening_reference`) VALUES ('$e')");
+        
+            $qry =  "INSERT INTO `unloading_rake_opening`(`RR_No`, `RR_Qty`, `RR_Date`, `Placement_Time`, `Material`, `Company`, `Transporter`, `Box_Type`, `Billing_Head`, `Remarks`, `Total_Box`,`rake_status`) VALUES ('$RR_No','$RR_Qty','$RR_Date','$Placement_Time','$Material','$Company','$Transporter','$Box_Type','$Billing_Head','$Remarks','$Total_Box','close')";
+            $sql1 = "INSERT INTO `box_entry`( `box_no`, `box_status`, `gate_type`, `rake_ref_id`) VALUES ";
+            mysqli_query($conn, $qry);
             $rows = [];
-            $cmp_id = mysqli_fetch_assoc(mysqli_query($conn, "select max(`id`) as `id` from `company`"))['id'];
-            for ($i = 0; $i < count($_POST["employee_name"]); $i++) {
-                $rows[] = "( '{$_POST["employee_name"][$i]}','{$_POST["employee_number"][$i]}','{$_POST["employee_email"][$i]}','{$_POST["employee_designation"][$i]}','{$cmp_id}' )";
+            $cmp_id = mysqli_fetch_assoc(mysqli_query($conn, "select max(`id`) as `id` from `unloading_rake_opening`"))['id'];
+            for ($i = 0; $i < $Total_Box; $i++) {
+                echo $rows[] = "( '{$_POST["boxno"][$i]}','{$_POST["boxstatus"][$i]}','{$_POST["boxgate"][$i]}','{$cmp_id}' )";
             }
             $sql1 .= implode(",", $rows);
             if ($conn->query($sql1)) {
                 echo '<script>
-        // alert("Data updated successfully"); 
+          alert("Data added successfully"); 
         window.location="rake.php";</script>';
-            } else {
-                echo "Added Failed!!!";
+       
+        
             }
-            // $id = mysqli_insert_id($conn );
-        }else{
-            mysqli_query($conn, "UPDATE `unloading_rake_opening` SET `RR_No`='$RR_No',`RR_Qty`='$RR_Qty',`RR_Date`='$RR_Date',`Placement_Time`='$Placement_Time',`Material`='$Material',`Company`='$Company',`Transporter`='$Transporter',`Box_Type`='$Box_Type',`Billing_Head`='$Billing_Head',`Remarks`='$Remarks',`Total_Box`='$Total_Box' where id='$id'");
-        
-            $del = mysqli_query($conn,"DELETE FROM `box_entry` where `employee_ref_id`='$id'");
-        if($del){            
-        
-        $sql1 = "INSERT INTO `box_entry`(`employee_name`, `employee_number`, `employee_email`, `employee_designation`, `employee_ref_id`) VALUES ";
-        $rows = [];
-        for ($i = 0; $i < count($_POST["employee_name"]); $i++) {
-        $rows[] = "( '{$_POST["employee_name"][$i]}','{$_POST["employee_number"][$i]}','{$_POST["employee_email"][$i]}','{$_POST["employee_designation"][$i]}','{$cmp_id}' )";
-        }
-        $sql1 .= implode(",", $rows);
-        if ($conn->query($sql1)) {
-            echo '<script>
-            // alert("Data updated successfully"); 
-            window.location="rake.php";</script>';
         } else {
-            echo "Added Failed!!!";
+            mysqli_query($conn, "UPDATE `unloading_rake_opening` SET `RR_No`='$RR_No',`RR_Qty`='$RR_Qty',`RR_Date`='$RR_Date',`Placement_Time`='$Placement_Time',
+            `Material`='$Material',`Company`='$Company',`Transporter`='$Transporter',`Box_Type`='$Box_Type',`Billing_Head`='$Billing_Head',`Remarks`='$Remarks',
+            `Total_Box`='$Total_Box' where id='$id'");
+
+            //$del = mysqli_query($conn, "DELETE FROM `box_entry` where `employee_ref_id`='$id'");
+            // if ($del) {
+                echo '<script>
+          alert("Data updated successfully"); 
+        // window.location="rake.php";</script>';
+            // }
         }
-        echo '<script>
-        // alert("Data updated successfully"); 
-        window.location="rake.php";</script>';
     }
-}
+
+    if (isset($_GET['id'])) {
+        $uid = $_GET['id'];
+        $data = mysqli_fetch_assoc(mysqli_query($conn, "select * from `unloading_rake_opening` where id='$uid'"));
         
+        $box_result = mysqli_query($conn, "SELECT * FROM `box_entry` where `rake_ref_id`=$uid");
     }
-
-
-
-
-
-
-
-
-
-
-if(isset($_GET['id']))
-{
-    $uid=$_GET['id'];
-    $data=mysqli_fetch_assoc(mysqli_query($conn,"select * from `unloading_rake_opening` where id='$uid'"));
-}
 }
 ?>
 
@@ -137,84 +115,84 @@ if(isset($_GET['id']))
                             </h2>
 
                         </div>
-                        <div class="body">
-                            <form id="sender_form" method="post" action="#" enctype="multipart/form-data">
-                                <input type="hidden" name="id"
-                                    value="<?php if(isset($_GET['id'])) { echo $data['id']; } ?>">
+                        <form id="sender_form" method="post" action="#" enctype="multipart/form-data">
+
+                            <div class="body">
+                                <input type="hidden" name="id" value="<?php if (isset($_GET['id'])) {
+                                                                            echo $data['id'];
+                                                                        } ?>">
 
                                 <div class="form-group form-float">
                                     <div class="form-line focused">
-                                        <input type="date" id="RR_Date" name="RR_Date" class="form-control"
-                                            value="<?php echo @$data['RR_Date']; ?>" required>
+                                        <input type="datetime-local" id="RR_Date" name="RR_Date" class="form-control" value="<?php echo @$data['RR_Date']; ?>" >
                                         <label class="form-label">RR_Date</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="RR_No" name="RR_No" class="form-control"
-                                            value="<?php echo @$data['RR_No']; ?>" required>
+                                        <input type="text" id="RR_No" name="RR_No" class="form-control" value="<?php echo @$data['RR_No']; ?>" >
                                         <label class="form-label">RR_No</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="RR_Qty" name="RR_Qty" class="form-control"
-                                            value="<?php echo @$data['RR_Qty']; ?>" required>
+                                        <input type="text" id="RR_Qty" name="RR_Qty" class="form-control" value="<?php echo @$data['RR_Qty']; ?>" >
                                         <label class="form-label">RR_Qty</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line focused">
-                                        <input type="time" id="Placement_Time" name="Placement_Time"
-                                            class="form-control" value="<?php echo @$data['Placement_Time']; ?>"
-                                            required>
+                                        <input type="time" id="Placement_Time" name="Placement_Time" class="form-control" value="<?php echo @$data['Placement_Time']; ?>" >
                                         <label class="form-label">Placement_Time</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <!-- <input type="text" id="Company" name="Company" class="form-control"
-                                            value="<?php echo @$data['Company']; ?>" required> -->
-                                        <select id="Company" name="Company" class="form-control" required>
-                                            <option checked disabled>Select Company</option>
+                                        <!--<input type="text" id="Name" name="Name"
+                                            class="form-control" value="<?php echo @$data['Name']; ?>"
+                                            >-->
+
+                                        <select id="Company" name="Company" class="form-control" >
+                                            <option>Select Company</option>
 
                                             <option value="<?php echo @$data['Company']; ?>">
                                                 <?php echo @$data['Company']; ?>
                                             </option>
-                                            <?php 
-                                            $dat = mysqli_query($conn , "SELECT * FROM `Company`");
-                                            while($row= mysqli_fetch_assoc($dat)){
+                                            <?php
+
+                                            $dat = mysqli_query($conn, "SELECT * FROM `company`");
+                                            while ($row = mysqli_fetch_assoc($dat)) {
                                             ?>
-                                            <option value="<?php  echo $row['Name']?>"><?php echo $row['Name']?>
-                                            </option>
+                                                <option value="<?php echo $row['Name'] ?>"><?php echo $row['Name'] ?>
+                                                </option>
                                             <?php } ?>
                                         </select>
-                                        <label class="form-label">Company</label>
+                                        <!--<label class="form-label">Company</label>-->
                                     </div>
                                 </div>
 
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <select id="Material" name="Material" class="form-control" required>
-                                            <option disabled>Select Material</option>
-                                            <option value="<?php echo $data['Material']; ?>" selected>
+                                        <select id="Material" name="Material" class="form-control" >
+                                            <option>Select Material</option>
+                                            <option value="<?php echo $data['Material']; ?>" >
                                                 <?php echo @$data['Material']; ?>
 
-                                                <?php 
-                                            $dat = mysqli_query($conn , "SELECT * FROM `material`");
-                                            while($row= mysqli_fetch_assoc($dat)){
-                                            ?>
-                                            <option value="<?php  echo $row['name']?>"><?php echo $row['name']?>
+                                                <?php
+                                                $dat = mysqli_query($conn, "SELECT * FROM `material`");
+                                                while ($row = mysqli_fetch_assoc($dat)) {
+                                                ?>
+                                            <option value="<?php echo $row['name'] ?>"><?php echo $row['name'] ?>
                                             </option>
-                                            <?php } ?>
+                                        <?php } ?>
                                         </select>
 
-                                        <label class="form-label">Material</label>
+                                        <!--<label class="form-label">Material</label>-->
                                     </div>
                                 </div>
 
@@ -222,230 +200,226 @@ if(isset($_GET['id']))
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <!-- <input type="text" id="Box_Type" name="Box_Type" class="form-control"
-                                            value="<?php echo @$data['Box_Type']; ?>" required> -->
-                                        <select id="Box_Type" name="Box_Type" class="form-control" required>
-                                            <option checked disabled>Select Box_Type</option>
+                                            value="<?php echo @$data['Box_Type']; ?>" > -->
+
+                                        <select id="Box_Type" name="Box_Type" class="form-control" >
+                                            <option>Select Box_Type</option>
 
                                             <option value="<?php echo @$data['Box_Type']; ?>">
                                                 <?php echo @$data['Box_Type']; ?>
                                             </option>
-                                            <?php 
-                                            $dat = mysqli_query($conn , "SELECT * FROM `boxtype`");
-                                            while($row= mysqli_fetch_assoc($dat)){
+                                            <?php
+                                            $dat = mysqli_query($conn, "SELECT * FROM `boxtype`");
+                                            while ($row = mysqli_fetch_assoc($dat)) {
                                             ?>
-                                            <option value="<?php  echo $row['name']?>"><?php echo $row['name']?>
-                                            </option>
+                                                <option value="<?php echo $row['name'] ?>"><?php echo $row['name'] ?>
+                                                </option>
                                             <?php } ?>
                                         </select>
-                                        <label class="form-label">Box_Type</label>
+                                        <!--<label class="form-label">Box_Type</label>-->
                                     </div>
                                 </div>
 
 
-
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="box_no_count" name="Total_Box" class="form-control"
-                                            value="<?php echo @$data['Total_Box']; ?>" required>
-                                        <label class="form-label">Total_Box</label>
-                                    </div>
-                                </div>
-
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <!-- <input type="text" id="Transporter" name="Transporter" class="form-control"
-                                            value="<?php echo @$data['Transporter']; ?>" required> -->
-                                        <select id="Transporter" name="Transporter" class="form-control" required>
-                                            <option checked disabled>Select Transporter</option>
-
+                                        <select id="Transporter" name="Transporter" class="form-control" >
+                                            <option>Select Transporter</option>
                                             <option value="<?php echo @$data['Transporter']; ?>">
                                                 <?php echo @$data['Transporter']; ?>
                                             </option>
-                                            <?php 
-                                            $dat = mysqli_query($conn , "SELECT * FROM `Transporter`");
-                                            while($row= mysqli_fetch_assoc($dat)){
+                                            <?php
+                                            $dat = mysqli_query($conn, "SELECT * FROM `transporter`");
+                                            while ($row = mysqli_fetch_assoc($dat)) {
                                             ?>
-                                            <option value="<?php  echo $row['Name']?>"><?php echo $row['Name']?>
-                                            </option>
+                                                <option value="<?php echo $row['Name'] ?>"><?php echo $row['Name'] ?>
+                                                </option>
                                             <?php } ?>
                                         </select>
-                                        <label class="form-label">Transporter</label>
+                                        <!--<label class="form-label">Transporter</label>-->
                                     </div>
                                 </div>
 
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="text" id="box_no_count" name="box_no_count" class="form-control" value="<?php echo @$data['Total_Box']; ?>" >
+                                        <label class="form-label">Total_Box</label>
+                                    </div>
+                                </div>
 
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <!-- <input type="text" id="Billing_Head" name="Billing_Head" class="form-control"
-                                            value="<?php echo @$data['Billing_Head']; ?>" required> -->
+                                            value="<?php echo @$data['Billing_Head']; ?>" > -->
 
-                                        <select id="Billing_Head" name="Billing_Head" class="form-control" required>
-                                            <option checked disabled>Select Billing_Head</option>
+                                        <select id="Billing_Head" name="Billing_Head" class="form-control" >
+                                            <option>Select Billing_Head</option>
 
                                             <option value="<?php echo @$data['Billing_Head']; ?>">
                                                 <?php echo @$data['Billing_Head']; ?>
                                             </option>
-                                            <?php 
-                                            $dat = mysqli_query($conn , "SELECT * FROM `billinghead`");
-                                            while($row= mysqli_fetch_assoc($dat)){
+                                            <?php
+                                            $dat = mysqli_query($conn, "SELECT * FROM `billinghead`");
+                                            while ($row = mysqli_fetch_assoc($dat)) {
                                             ?>
-                                            <option value="<?php  echo $row['name']?>"><?php echo $row['name']?>
-                                            </option>
+                                                <option value="<?php echo $row['name'] ?>"><?php echo $row['name'] ?>
+                                                </option>
                                             <?php } ?>
                                         </select>
 
-                                        <label class="form-label">Billing Head</label>
+                                        <!--<label class="form-label">Billing Head</label>-->
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Remarks" name="Remarks" class="form-control"
-                                            value="<?php echo @$data['Remarks']; ?>" required>
+                                        <input type="text" id="Remarks" name="Remarks" class="form-control" value="<?php echo @$data['Remarks']; ?>" >
                                         <label class="form-label">Remarks</label>
                                     </div>
                                 </div>
 
 
-
-
-
-
-
-
-
                                 <!-- table add -->
 
-                                <table class='table'>
-                                    <thead>
-                                        <tr>
-                                            <td>Box No</td>
-                                            <td>Status(Full / Empty)</td>
-                                            <td>Contractor Name</td>
-                                            <td>Contractor Amount</td>
-                                        </tr>
-                                    </thead>
+
+
+                            </div>
+
+                            <!--total box-->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-2">
+                                        Box No.
+                                    </div>
+                                    <div class="col-sm-2">
+                                        Box Status
+                                    </div>
+                                    <div class="col-sm-2">
+                                        Gate Type
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--testing table-->
+                            <table class='table'>
+                                   
                                     <tbody id="tbl">
                                         <?php
 
-                                        if (mysqli_fetch_row($box_entry_result) > 0) {
-                                            $box_entry_result = mysqli_query($conn, "SELECT * FROM `box_entry` where `rake_referance_id`=$uid");
+                                        if (mysqli_fetch_row($box_result) > 0) {
+                                             $box_result = mysqli_query($conn, "SELECT * FROM `box_entry` where `rake_ref_id`=$uid");
 
-                                            while ($row = mysqli_fetch_assoc($box_entry_result)) { ?>
+                                            while ($row = mysqli_fetch_assoc($box_result)) { ?>
                                         <tr>
-                                            <td><input class="form-control" type='text' name='employee_name[]'
-                                                    placeholder="box_no" required value=<?= $row['employee_name'] ?>>
-                                            </td>
-
-
-
-
-
-                                            <td>
-                                                <select class="form-control" name='employee_number[]'>
-                                                    <option selected>Select Status</option>
-                                                    <option value=Full>Full</option>
-                                                    <option value=Empty>Empty</option>
-                                                </select>
-                                            </td>
-
-
-
-
-
-
-                                            <td><input class="form-control" type='text' name='employee_email[]'
-                                                    placeholder="contractor_name" value="<?= $row['employee_email'] ?>">
-                                            </td>
-                                            <td><input class="form-control" type='text' name='employee_designation[]'
-                                                    placeholder="contractor_amount" required
-                                                    value=<?= $row['employee_designation'] ?>></td>
-                                            <td><input class="btn btn-success btn-sm" type='button' value='+'
-                                                    onclick='add_row()'></td>
-                                            <td><input class="btn btn-danger btn-sm" type='button' value='-'
-                                                    onclick='remove_row(this)'></td>
-                                        </tr>
-                                        <?php }
-                                        } else { ?>
-                                        <tr>
-                                            <td><input class="form-control" type='text' name='employee_name[]'
-                                                    placeholder="Box No" required value=<?= $row['employee_name'] ?>>
-                                            </td>
-
-
-
-                                            <td>
-                                                <!-- <input class="form-control" type='text' name='employee_number[]' placeholder="employee_number" required value=<?= $row['employee_email'] ?>> -->
-                                                <select class="form-control" name='employee_number[]'>
-                                                    <option selected>Select Status</option>
-                                                    <option value=Full>Full</option>
-                                                    <option value=Empty>Empty</option>
-                                                </select>
-                                            </td>
-
-
-
-
-
-                                            <td><input class="form-control" type='text' name='employee_email[]'
-                                                    placeholder="Contractor Name" value="<?= $row['employee_email'] ?>">
-                                            </td>
-                                            <td><input class="form-control" type='text' name='employee_designation[]'
-                                                    placeholder="Contractor Amount" required
-                                                    value=<?= $row['employee_designation'] ?>></td>
-                                            <td><input class="btn btn-success btn-sm" type='button' value='+'
-                                                    onclick='add_row()'></td>
-                                            <td><input class="btn btn-danger btn-sm" type='button' value='-'
-                                                    onclick='remove_row(this)'></td>
-                                        </tr>
-                                        <?php } ?>
-                                    </tbody>
+                                            <td><input class="form-control" type='text' name='box_no[]' placeholder="Box no" value=<?= $row['box_no'] ?>></td>
+                                            <td><input class="form-control" type='text' name='box_status[]' placeholder="box status" value=<?= $row['box_status'] ?>></td>
+                                            <td><input class="form-control" type='text' name='gate_type[]' placeholder="gate type" value="<?= $row['gate_type'] ?>"></td>
+                                        </trr>
+                                        <?php } } ?>
+                                        </tbody>
                                 </table>
-                                <!-- // table add -->
+
+                            <!--testing table end-->
+                            
+                            <div class="row">
+                                <div class="input_fields_wrap container-fluid">
+
+                                </div>
+                            </div>
+                            <!--// total box-->
 
 
 
 
 
+                            <br />
+
+                            <button class="btn btn-primary waves-effect submit_sender" name="submit_sender" type="submit">SUBMIT</button>
 
 
-
-
-
-                                <br />
-
-                                <button class="btn btn-primary waves-effect submit_sender" name="submit_sender"
-                                    type="submit">SUBMIT</button>
-
-
-                            </form>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <!-- Vertical Layout | With Floating Label -->
+        </div>
+        <!-- Vertical Layout | With Floating Label -->
 
         </div>
     </section>
 
     <?php include_once('includes/footer.php'); ?>
 
-    <script>
-    function add_row() {
-        var tr = document.createElement("tr");
-        tr.innerHTML =
-            "<td><input type='text' class='form-control' placeholder='Box No' name='employee_name[]' required ></td> <td><select class='form-control' name='employee_number[]'><option selected>Select Status</option><option value=Full>Full</option><option value=Empty>Empty</option></select></td> <td><input type='text'  placeholder='Contractor Name' class='form-control' name='employee_email[]' required ></td> <td><input type='text' class='form-control'  placeholder='Contractor Amount' name='employee_designation[]'  ></td> <td><input type='button' value='+' onclick='add_row()' class='btn btn-success btn-sm'></td> <td><input type='button' value='-' onclick='remove_row(this)' class='btn btn-danger btn-sm'></td>";
-        document.getElementById("tbl").appendChild(tr);
-    }
 
-    function remove_row(e) {
-        var n = document.querySelector("#tbl").querySelectorAll("tr").length;
-        if (n > 1 && confirm("Are You Sure") == true) {
-            var ele = e.parentNode.parentNode;
-            ele.remove();
-        }
-    }
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            var max_fields = 100; //maximum input boxes allowed
+            var wrapper = $(".input_fields_wrap"); //Fields wrapper
+            var add_button = $(".add_field_button"); //Add button ID
+
+            var x = 1; //initlal text box count
+            var inpid = 1;
+            $(add_button).click(function(e) { //on add input button click
+                e.preventDefault();
+                if (x < max_fields) { //max input box allowed
+                    x++; //text box increment
+                    inpid++;
+                    $(wrapper).append('<div class="form-group"><div class="col-sm-2">' +
+                        '<input type="text" class="form-control" name="shipmentno[' + inpid + ']" id="shipmentno_' + inpid + '" >' +
+                        '</div>' +
+                        '<div class="col-sm-2">' +
+                        '<input type="text" class="form-control" name="stmno_' + inpid + '" name="stmno_' + inpid + '">' +
+                        '</div>' +
+                        '<div class="col-sm-2">' +
+                        '<input type="text" class="form-control" name="stmdate_' + inpid + '" name="stmdate_' + inpid + '">' +
+                        '</div>' +
+                        '<div class="col-sm-2">' +
+                        '<input type="text" class="form-control chno" name="chassisno_' + inpid + '" name="chassisno_' + inpid + '">' +
+                        '</div>' +
+                        '<div class="col-sm-3">' +
+                        '<input type="text" class="form-control" name="remarks_' + inpid + '" name="remarks_' + inpid + '">' +
+                        '</div>' +
+                        '<a style="color:#f00;" href="#" class="remove_field">Remove</a></div></div>'); //add input box
+                }
+            });
+            $(wrapper).on("click", ".remove_field", function(e) { //user click on remove text
+                e.preventDefault();
+                $(this).parent('div').remove();
+                x--;
+            });
+            $("#box_no_count").keyup(function() {
+                $(wrapper).html('');
+                var count = $(this).val();
+                var i;
+                for (i = 1; i <= count; i++) {
+                    if (i <= 100) { //max input box allowed
+                        x++; //text box increment
+                        inpid++;
+                        $(wrapper).append('<div class="row"><div class="col-sm-2">' +
+                            '<input type="text" class="form-control" name="boxno[]" readonly value="' + i + '" id="boxno_' + inpid + '" >' +
+                            '</div>' +
+                            '<div class="col-sm-2">' +
+                            '<select name="boxstatus[]" class="form-control" id="boxstatus_' + inpid + '">' +
+                            '<option value="full">FULL</option>' +
+                            '<option value="half">HALF</option>' +
+                            '<option value="empty">EMPTY</option>' +
+                            '</select>' +
+                            '</div>' +
+                            '<div class="col-sm-2">' +
+                            '<select name="boxgate[]" class="form-control" id="boxgate_' + inpid + '">' +
+                            '<option value="two">TWO GATE</option>' +
+                            '<option value="three">THREE GATE</option>' +
+                            '<option value="four">FOUR GATE</option>' +
+                            '</select>' +
+                            '</div>' +
+                            '</div></div>'); //add input box
+                    }
+                }
+            });
+        });
+
+        // <a style="color:#f00;" href="#" class="remove_field">Remove</a>
     </script>
 </body>
 

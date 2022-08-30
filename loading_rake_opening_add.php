@@ -90,13 +90,13 @@ if(isset($_GET['id']))
 
                                     <div class="form-group form-float">
                                     <div class="form-line">                                       
-                                        <select id="Company" name="Company" class="form-control" required>
+                                        <select id="Company" name="Company" class="form-control" >
                                             <option checked disabled>Select Company</option>
 
                                             <option value="<?php echo @$data['Company']; ?>"><?php echo @$data['Company']; ?>
                                             </option>
                                             <?php 
-                                            $dat = mysqli_query($conn , "SELECT * FROM `Company`");
+                                            $dat = mysqli_query($conn , "SELECT * FROM `company`");
                                             while($row= mysqli_fetch_assoc($dat)){
                                             ?>
                                             <option value="<?php  echo $row['Name']?>"><?php echo $row['Name']?></option>
@@ -111,7 +111,7 @@ if(isset($_GET['id']))
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="Order_no" name="Order_no" class="form-control"
-                                            value="<?php echo @$data['Order_no']; ?>" required>
+                                            value="<?php echo @$data['Order_no']; ?>" >
                                         <label class="form-label">Order No</label>
                                     </div>
                                 </div>
@@ -119,7 +119,7 @@ if(isset($_GET['id']))
                                 <div class="form-group form-float">
                                     <div class="form-line focused">
                                         <input type="date" id="Opening_date" name="Opening_date" class="form-control"
-                                            value="<?php echo @$data['Opening_date']; ?>" required>
+                                            value="<?php echo @$data['Opening_date']; ?>" >
                                         <label class="form-label">Opening Date</label>
                                     </div>
                                 </div>    
@@ -127,7 +127,7 @@ if(isset($_GET['id']))
                                 <div class="form-group form-float">
                                     <div class="form-line focused">
                                         <input type="time" id="Opening_time" name="Opening_time" class="form-control"
-                                            value="<?php echo @$data['Opening_time']; ?>" required>
+                                            value="<?php echo @$data['Opening_time']; ?>" >
                                         <label class="form-label">Opening Time</label>
                                     </div>
                                 </div>    
@@ -136,7 +136,7 @@ if(isset($_GET['id']))
                                 <div class="form-group form-float">
                                     <div class="form-line">
 
-                                        <select id="Material" name="Material" class="form-control" required>
+                                        <select id="Material" name="Material" class="form-control" >
                                             <option  disabled>Select Material</option>                                                                                                                             
                                             <option value="<?php echo $data['Material']; ?>" selected><?php echo @$data['Material']; ?>                                            
                                             <?php 
@@ -156,13 +156,13 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">                                      
-                                        <select id="Transporter" name="Transporter" class="form-control" required>
+                                        <select id="Transporter" name="Transporter" class="form-control" >
                                             <option checked disabled>Select Transporter</option>
 
                                             <option value="<?php echo @$data['Transporter']; ?>"><?php echo @$data['Transporter']; ?>
                                             </option>
                                             <?php 
-                                            $dat = mysqli_query($conn , "SELECT * FROM `Transporter`");
+                                            $dat = mysqli_query($conn , "SELECT * FROM `transporter`");
                                             while($row= mysqli_fetch_assoc($dat)){
                                             ?>
                                             <option value="<?php  echo $row['Name']?>"><?php echo $row['Name']?></option>

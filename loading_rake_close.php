@@ -61,20 +61,28 @@ if(isset($_GET['id']))
 
                                     // total weight
 // checkpost total weight
-// echo "SELECT sum(`net_weight`) as lsno1 FROM `loading_vehicle_entry` WHERE `dump` = 'Checkpost' AND `rake_ref_id`=$idd".'<br>';
-// echo "SELECT sum(`net_weight`) as lsno3 FROM `loading_vehicle_entry` WHERE `dump` = 'Direct' AND `rake_ref_id`=$idd";exit();
+//  "SELECT sum(`net_weight`) as lsno1 FROM `loading_vehicle_entry` WHERE `dump` = 'Checkpost' AND `rake_ref_id`=$idd".'<br>';
+//  "SELECT sum(`net_weight`) as lsno3 FROM `loading_vehicle_entry` WHERE `dump` = 'Direct' AND `rake_ref_id`=$idd";exit();
 
 $query1 = mysqli_query($conn ,"SELECT sum(`net_weight`) as lsno1 FROM `loading_vehicle_entry` WHERE `dump` = 'Checkpost' AND `rake_ref_id`=$idd");
 $result2 = mysqli_fetch_assoc($query1);
-// echo $result2['lsno1'];
-
+$a =  $result2['lsno1'];
+// if($a == NULL){
+//     $a=0;
+// }else{
+//     $a =  $result2['lsno1'];
+// }
 
 
 // direct total weight
 $query5 = mysqli_query($conn ,"SELECT sum(`net_weight`) as lsno3 FROM `loading_vehicle_entry` WHERE `dump` = 'Direct' AND `rake_ref_id`=$idd");
 $result6 = mysqli_fetch_assoc($query5);
-// echo $result6['lsno3'];
-
+$b = $result6['lsno3'];
+// if($b == NULL){
+//     $b=0;
+// }else{
+//   $b = $result6['lsno3']; 
+// }
 
 
 // previous weight
@@ -142,9 +150,9 @@ $result6 = mysqli_fetch_assoc($query5);
 
                                 <div class="form-group form-float">
                                     <div class="form-line focused">
-                                        <input type="date" id="rake_placement_date" name="rake_placement_date"
+                                        <input type="datetime-local" id="rake_placement_date" name="rake_placement_date"
                                             class="form-control" value="<?php echo @$data['rake_placement_date']; ?>"
-                                            required>
+                                            >
                                         <label class="form-label">Rake Placement Date</label>
                                     </div>
                                 </div>
@@ -152,9 +160,9 @@ $result6 = mysqli_fetch_assoc($query5);
 
                                 <div class="form-group form-float">
                                     <div class="form-line focused">
-                                        <input type="date" id="rake_release_date" name="rake_release_date"
+                                        <input type="datetime-local" id="rake_release_date" name="rake_release_date"
                                             class="form-control" value="<?php echo @$data['rake_release_date']; ?>"
-                                            required>
+                                            >
                                         <label class="form-label">Rake Release Date</label>
                                     </div>
                                 </div>
@@ -163,8 +171,8 @@ $result6 = mysqli_fetch_assoc($query5);
 
                                 <div class="form-group form-float">
                                     <div class="form-line focused">
-                                        <input type="date" id="rr_date" name="rr_date" class="form-control"
-                                            value="<?php echo @$data['rr_date']; ?>" required>
+                                        <input type="datetime-local" id="rr_date" name="rr_date" class="form-control" 
+                                            value="<?php echo @$data['rr_date']; ?>" >
                                         <label class="form-label">R.R Date</label>
                                     </div>
                                 </div>
@@ -172,7 +180,7 @@ $result6 = mysqli_fetch_assoc($query5);
                                 <div class="form-group form-float">
                                     <div class="form-line ">
                                         <input type="text" id="total_box" name="total_box" class="form-control"
-                                            value="<?php echo @$data['total_box']; ?>" required>
+                                            value="<?php echo @$data['total_box']; ?>" >
                                         <label class="form-label">Total Box</label>
                                     </div>
                                 </div>
@@ -180,7 +188,7 @@ $result6 = mysqli_fetch_assoc($query5);
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="rr_no" name="rr_no" class="form-control"
-                                            value="<?php echo @$data['rr_no']; ?>" required>
+                                            value="<?php echo @$data['rr_no']; ?>" >
                                         <label class="form-label">R.R. No.</label>
                                     </div>
                                 </div>
@@ -196,7 +204,7 @@ $result6 = mysqli_fetch_assoc($query5);
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="rr_wt" name="rr_wt" class="form-control"
-                                            value="<?php echo @$data['rr_wt']; ?>" required>
+                                            value="<?php echo @$data['rr_wt']; ?>"  onchange="javascript:calcu()">
                                         <label class="form-label">R.R. Wt</label>
                                     </div>
                                 </div>
@@ -205,7 +213,7 @@ $result6 = mysqli_fetch_assoc($query5);
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="checkpost_wt" name="checkpost_wt" class="form-control"
-                                            value="<?php echo $result2['lsno1']; ?>" readonly>
+                                            value="<?php echo $a; ?>" readonly>
                                         <label class="form-label">Checkpost Wt</label>
                                     </div>
                                 </div>
@@ -214,7 +222,7 @@ $result6 = mysqli_fetch_assoc($query5);
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="direct_wt" name="direct_wt" class="form-control"
-                                            value="<?php echo $result6['lsno3']; ?>" readonly>
+                                            value="<?php echo $b; ?>" readonly>
                                         <label class="form-label">Direct Wt</label>
                                     </div>
                                 </div>
@@ -274,11 +282,12 @@ $result6 = mysqli_fetch_assoc($query5);
 
         var checkpost_wt = document.getElementById("checkpost_wt").value;
         var direct_wt = document.getElementById("direct_wt").value;
+        var previous_wt = document.getElementById("previous_wt").value;
+        var rr_wt = document.getElementById("rr_wt").value;
         var ground_loss = document.getElementById("ground_loss").value;
         var adject_qty = document.getElementById("adject_qty").value;
-        // var current_stock = document.getElementById("current_stock").value;
 
-        var total = parseInt(checkpost_wt) + parseInt(direct_wt);
+        var total = parseInt(checkpost_wt) + parseInt(direct_wt) + parseInt(previous_wt) - parseInt(rr_wt) ;
         var current_stock =  parseInt(total) - ground_loss - adject_qty;
         document.getElementById("current_stock").value = current_stock;
 

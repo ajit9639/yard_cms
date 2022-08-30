@@ -30,8 +30,12 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card" id="card">
                         <div class="header">
-                            <h2 class="text-center">
-                                Vehicle In
+                            <h2 class="text-center">                             
+                                 <?php                            							 
+                           $count = mysqli_fetch_assoc(mysqli_query($conn,"select COUNT(`id`) as 'cid' from `unloading_vehicle_out_temp` where `unloading_ref_id`='$id' AND `kata_status`='1'"));
+                           $d = $count['cid'];
+                            ?>
+                              Out Vehicle : <?=$d ?>
                             </h2>
                             <!-- <ul class="header-dropdown m-r--5">
                             <li class="dropdown">
@@ -47,36 +51,42 @@
                                 <table class="table table-bordered table-striped table-hover ">
                                     <thead>
                                         <tr>
-                                           
+                                           <th>SNO</th>
                                             <th>Action</th>
                                             <th>Vehicle No</th>
                                             <th>Vehicle Type</th>
                                             <th>T Challan No</th>
                                             <th>Status</th>                                        
                                             <th>Remarks</th>
-                                                                                      
+                                             <th>Action</th>                          
                                         </tr>
                                     </thead>
 
                                     <tbody>
                                         <?php
-                            $d = mysqli_query($conn,"SELECT * FROM `unloading_vehicle_in_temp` where `unloading_ref_id`='$id' AND `kata_status`='0'");
+                                        $s=1;
+                            $d = mysqli_query($conn,"select * from `unloading_vehicle_out_temp` where `unloading_ref_id`='$id' AND `kata_status`='1'");
                             while($row = mysqli_fetch_assoc($d))
                             { ?>
                                         <tr>
                                            
-                                            <!-- <td><a href="" class="btn btn-danger">OUT</a></td> -->
-                                            <td><a style="padding:5px; padding-left:15px; padding-right:15px; font-size:14px;"
-                                                    class="btn btn-info btn-lg btn-sm" data-toggle="modal"
-                                                    data-target="#myModal1" href="javascript:void(0);">Enter</a></td>
-                                                    <td><?php echo $row['Vehicle_No']; ?></td>
-                                                    <td></td>
-                                                    <td><?php echo $row['trans_challan']; ?></td>
+                                            <td><?php echo $s; ?></td>
+                                            <td>
+                                              <a href="un_loading_kata_entry_vehicle_out.php?id=<?php echo $row['id']; ?>" class="btn btn-success">Action</a>
+</td>
+                                                    <td><?php echo $row['vehicle_no']; ?></td>
+                                          <td><?php echo $row['vehicle_type']; ?></td>
+                                                    
+                                             <td><?php echo $row['trans_challan']; ?></td>
                                             <td><button class="btn btn-warning btn-sm">OUT</button></td>
-                                            <td><?php echo $row['Remarks']; ?></td>                                                                                                                               
+                                            <td><?php echo $row['Remarks']; ?></td>  
+                                          <td>
+                                              <a href="unloading_last_kata_edit.php?id=<?php echo $row['id']; ?>"><i class="material-icons">edit</i></a>
+                                              <a href="unloading_delete_vehicle.php?id=<?php echo $row['id']?>&types='outvehicle'"><i class="material-icons">delete</i></a>
+                                          </td>  
                                         </tr>
 
-                                        <?php } ?>
+                                        <?php $s++; } ?>
 
                                     </tbody>
                                 </table>

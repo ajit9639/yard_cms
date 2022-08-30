@@ -3,15 +3,20 @@ include_once('includes/header.php');
 include_once('includes/check_login.php');
 
 $id =$_GET['id'];
-
+$idd =$_GET['id'];
 $rake_open_data=mysqli_fetch_assoc(mysqli_query($conn,"SELECT * FROM `unloading_rake_opening` WHERE `id`='$id'"));
 $type = $_GET['type'];
+
 // delete
+$dlt_id = mysqli_fetch_assoc(mysqli_query($conn,"SELECT * FROM `unloading_vehicle_in_temp` WHERE `id`='$id'"));  
+$unid = $dlt_id['unloading_ref_id'];
+
+
 if($type == 'delete'){
 $del = mysqli_query($conn, "DELETE FROM `unloading_vehicle_in_temp` WHERE `id`='$id'");
 if($del){
     echo "<script>alert('Data Deleted Successfully');
-    window.location='unloading_checkpost1.php';
+    window.location.replace('unloading_vehicle_entry.php?id=$unid');
     </script>";
 }else{
     echo "<script>alert('Data Deleted Failed');</script>";
@@ -19,8 +24,9 @@ if($del){
 }elseif($type == 'outdelete'){
     $del = mysqli_query($conn, "DELETE FROM `unloading_vehicle_out_temp` WHERE `id`='$id'");
     if($del){
+        $idd =$_GET['id'];
         echo "<script>alert('Data Deleted Successfully');
-        window.location='unloading_checkpost1.php';
+        //window.location='unloading_vehicle_entry.php?id=$idd';
         </script>";
     }else{
         echo "<script>alert('Data Deleted Failed');</script>";
@@ -35,7 +41,7 @@ $id=$_GET['id'];
 $Vehicle_No = $_POST['Vehicle_No'];
 $vehicle_type = $_POST['vehicle_type'];
 $Date = $_POST['Date'];
-$Loading_Slip_No = $_POST['Loading_Slip_No'];
+$Loading_Slip_No = $_POST['loading_slip'];
 $Tare_Weight = $_POST['Tare_Weight'];
 $D_License_No = $_POST['D_License_No'];
 $Remarks = $_POST['Remarks'];
@@ -107,62 +113,74 @@ if(isset($_POST['vehicle_out'])){
 
                         <div class="col-sm-6 ">
                             <label for="usr">Vehicle No:</label>
-                            <input type="text" class="form-control" name="vehicle_no">
+                            
+                           <select name="vehicle_no" id="" class="form-control" >
+                                            <option selected> Select Vehicle_No</option>
+                                            <?php 
+                                                $daata = mysqli_query($conn , "SELECT * FROM `vehicle_reg`");
+                                                while($get_type = mysqli_fetch_assoc($daata)){
+                                                ?>
+                                            <option value="<?php echo $get_type['Vehicle_No']?>">
+                                                <?php echo $get_type['Vehicle_No']?></option>
+                                            <?php } ?>
+                                        </select>
+                          
+                          
                         </div>
 
                         <div class="col-sm-6 ">
                             <label for="pwd">Transp Challan:</label>
-                            <input type="text" class="form-control" name="trans_challan" required>
+                            <input type="text" class="form-control" name="trans_challan" >
                         </div>
 
                         <div class="col-sm-6 ">
                             <label for="pwd">Company Challan:</label>
-                            <input type="text" class="form-control" name="company_challan" required>
+                            <input type="text" class="form-control" name="company_challan" >
                         </div>
 
                         <!-- <div class="col-sm-6 ">
                             <label for="pwd">Company Road Permit:</label>
-                            <input type="text" class="form-control" name="company_permit" required>
+                            <input type="text" class="form-control" name="company_permit" >
                         </div> -->
 
                         <div class="col-sm-6 ">
                             <label for="pwd">Tare Weight(kg):</label>
-                            <input type="text" class="form-control" name="tare_weight" required>
+                            <input type="text" class="form-control" name="tare_weight" >
                         </div>
 
                         <div class="col-sm-6 ">
                             <label for="pwd">Gross Weight(kg):</label>
-                            <input type="text" class="form-control" name="gross_weight" required>
+                            <input type="text" class="form-control" name="gross_weight" >
                         </div>
 
                         <div class="col-sm-6 ">
                             <label for="pwd">Shield No:</label>
-                            <input type="text" class="form-control" name="shield_no" required>
+                            <input type="text" class="form-control" name="shield_no" >
                         </div>
 
                         <div class="col-sm-6 ">
                             <label for="pwd">Fuel Slip No:</label>
-                            <input type="text" class="form-control" name="fuel_slip_no" required>
+                            <input type="text" class="form-control" name="fuel_slip_no" >
                         </div>
 
                         <div class="col-sm-6 ">
                             <label for="pwd">Fuel Qty (ltr):</label>
-                            <input type="text" class="form-control" name="fuel_qty" required>
+                            <input type="text" class="form-control" name="fuel_qty" >
                         </div>
 
                         <div class="col-sm-6 ">
                             <label for="pwd">Toll Tax Amt:</label>
-                            <input type="text" class="form-control" name="toll_tax_amt" required>
+                            <input type="text" class="form-control" name="toll_tax_amt" >
                         </div>
 
                         <div class="col-sm-6 ">
                             <label for="pwd">Adv. Amount:</label>
-                            <input type="text" class="form-control" name="adv_amt" required>
+                            <input type="text" class="form-control" name="adv_amt" >
                         </div>
 
                         <div class="col-sm-6 ">
                             <label for="pwd">Remarks:</label>
-                            <input type="text" class="form-control" name="remark" required>
+                            <input type="text" class="form-control" name="remark" >
                         </div>
 
                         <div class="col-sm-6" style="text-align: center;">
@@ -248,73 +266,30 @@ if(isset($_POST['vehicle_out'])){
                                 </div>
                                 <hr>
 
-                                <!-- <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control"
-                                            value="<?php echo @$rake_open_data['Company']; ?>" required readonly>
-                                        <label class="form-label">Company</label>
-                                    </div>
-                                </div>
-
+                                
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control"
-                                            value="<?php echo @$rake_open_data['RR_Date']; ?>" required readonly>
-                                        <label class="form-label">IN Date</label>
-                                    </div>
-                                </div>
+                                     	 <select name="Vehicle_No" class="form-control"  onChange="getvehicletype(this.value)">
+                                            <!--<option selected> Select Vehicle_No</option>-->
+                                            <?php 
+                                                $daata = mysqli_query($conn , "SELECT * FROM `vehicle_reg`");
+                                                while($get_type = mysqli_fetch_assoc($daata)){
+                                                ?>
+                                            <option value="<?php echo $get_type['Vehicle_No']?>">
+                                                <?php echo $get_type['Vehicle_No']?></option>
+                                            <?php } ?>
+                                        </select>
 
-
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control"
-                                            value="<?php echo @$rake_open_data['RR_No']; ?>" required readonly>
-                                        <label class="form-label">RR No</label>
-                                    </div>
-                                </div>
-
-
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control"
-                                            value="<?php echo @$rake_open_data['Transporter']; ?>" required readonly>
-                                        <label class="form-label">Transporter</label>
-                                    </div>
-                                </div>
-
-
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control"
-                                            value="<?php echo @$rake_open_data['Material']; ?>" required readonly>
-                                        <label class="form-label">Material</label>
-                                    </div>
-                                </div> -->
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="Vehicle_No" name="Vehicle_No" class="form-control"
-                                            value="<?php echo @$data['Vehicle_No']; ?>" required>
                                         <label class="form-label">Vehicle No</label>
                                     </div>
                                 </div>
 
 
                                 <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <!-- <input type="text" id="vehicle_type" name="vehicle_type"
-                                            class="form-control"
-                                            value="<?php echo @$rake_open_data['vehicle_type']; ?>" required> -->
-
-                                        <select name="vehicle_type" id="" class="form-control" required>
-                                            <option selected> Select Vehicle Type</option>
-                                            <?php 
-                                                $daata = mysqli_query($conn , "SELECT * FROM `vehicle`");
-                                                while($get_type = mysqli_fetch_assoc($daata)){
-                                                ?>
-                                            <option value="<?php echo $get_type['name']?>">
-                                                <?php echo $get_type['name']?></option>
-                                            <?php } ?>
-                                        </select>
+                                    <div class="form-line focused">
+                                        
+                                     <!--<select type="text" class="form-control" name="Vehicle_Type" id="state"></select> -->
+                                    <div  id="state"></div>
 
                                         <label class="form-label">Vehicle Type</label>
                                     </div>
@@ -323,7 +298,7 @@ if(isset($_POST['vehicle_out'])){
 
                                 <?php 
                                $rid = $_GET['id'];
-                               $query1 = mysqli_query($conn ,"SELECT count(`unloading_ref_id`) as lsno FROM `unloading_vehicle_in_temp` WHERE `status`=0 AND `unloading_ref_id`=$rid") ;
+                               $query1 = mysqli_query($conn ,"SELECT count(`unloading_ref_id`) as lsno FROM `unloading_vehicle_in_temp` WHERE `kata_status`=0 AND `unloading_ref_id`=$rid") ;
                             $result2 = mysqli_fetch_assoc($query1);
                             
                                 ?>
@@ -339,8 +314,8 @@ if(isset($_POST['vehicle_out'])){
 
                                 <div class="form-group form-float">
                                     <div class="form-line focused">
-                                        <input type="date" id="Date" name="Date" class="form-control"
-                                            value="<?php echo @$data['Date']; ?>" required>
+                                        <input type="datetime-local" id="Date" name="Date" class="form-control"
+                                            value="<?php echo @$data['Date']; ?>" >
                                         <label class="form-label">Date</label>
                                     </div>
                                 </div>
@@ -351,7 +326,7 @@ if(isset($_POST['vehicle_out'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="Tare_Weight" name="Tare_Weight" class="form-control"
-                                            value="<?php echo @$data['Tare_Weight']; ?>" required>
+                                            value="<?php echo @$data['Tare_Weight']; ?>" >
                                         <label class="form-label">Tare Weight</label>
                                     </div>
                                 </div>
@@ -361,7 +336,7 @@ if(isset($_POST['vehicle_out'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="kata_slip_no" name="kata_slip_no" class="form-control"
-                                            value="<?php echo @$data['kata_slip_no']; ?>" required>
+                                            value="<?php echo @$data['kata_slip_no']; ?>" >
                                         <label class="form-label">KATA Slip No</label>
                                     </div>
                                 </div>
@@ -371,7 +346,7 @@ if(isset($_POST['vehicle_out'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="D_License_No" name="D_License_No" class="form-control"
-                                            value="<?php echo @$data['D_License_No']; ?>" required>
+                                            value="<?php echo @$data['D_License_No']; ?>" >
                                         <label class="form-label">D. License No</label>
                                     </div>
                                 </div>
@@ -381,7 +356,7 @@ if(isset($_POST['vehicle_out'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="Remarks" name="Remarks" class="form-control"
-                                            value="<?php echo @$data['Remarks']; ?>" required>
+                                            value="<?php echo @$data['Remarks']; ?>">
                                         <label class="form-label">Remarks</label>
                                     </div>
                                 </div>
@@ -409,6 +384,21 @@ if(isset($_POST['vehicle_out'])){
      include "Vehicle_in.php";
      include "Vehicle_out.php";
     include_once('includes/footer.php'); ?>
+    
+    <script>
+function getvehicletype(val) {
+    $.ajax({
+        type: "POST",
+        url: "get-vehicle-type.php",
+        data: '$countryid=' + val,
+        success: function(data) {
+            $("#state").html(data);
+        }
+
+    });
+}
+</script>
+
 </body>
 
 </html>

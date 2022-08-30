@@ -40,20 +40,21 @@ include_once('includes/db.php');
                             <h2 class="text-center">
                             Checkpost 
                             </h2>
-                            <ul class="header-dropdown m-r--5">
-                                <li class="dropdown">
-                                    <a href="unloading_checkpost1_add.php">
-                                        <i class="material-icons adds">add</i>
-                                    </a>
+                            <!--<ul class="header-dropdown m-r--5">-->
+                            <!--    <li class="dropdown">-->
+                            <!--        <a href="unloading_checkpost1_add.php">-->
+                            <!--            <i class="material-icons adds">add</i>-->
+                            <!--        </a>-->
 
-                                </li>
-                            </ul>
+                            <!--    </li>-->
+                            <!--</ul>-->
                         </div>
                         <div class="body">
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                                     <thead>
                                         <tr>
+                                             <th>SNo</th>
                                             <th>Order No</th>
                                             <th>Transporter</th>
                                             <th>Company</th>
@@ -63,28 +64,19 @@ include_once('includes/db.php');
                                             <th>Closing date</th>
                                             <th>Work Done</th>
                                             <th>Remark</th>
-                                            
-
-                                            
                                             <th>Vehicle Entry</th>
-                                            
-
-
-                                            
-
-
-                                            <!-- <th>Action</th> -->
                                         </tr>
                                     </thead>
 
                                     <tbody>
                                         <?php
-
+                                    $s=1;
                                     $sql=mysqli_query($conn,"select * from `loading_rake_opening`");
                                     while($row=mysqli_fetch_assoc($sql))
                                     {
                                     ?>
                                         <tr>
+                                            <td><?php echo $s; ?></td>
                                             <td><?php echo $row['Order_no']; ?></td>
                                             <td><?php echo $row['Opening_date']; ?></td>
                                             <td><?php echo $row['Material']; ?></td>
@@ -95,24 +87,16 @@ include_once('includes/db.php');
                                             <td></td>
                                             <td></td>
                                            
-                                           
-                                            <td><a href="loading_vehicle_entry.php?id=<?php echo $row["id"] ?>" class="btn btn-success btn-sm">Vehicle Entry</a></td>
-                                            
-                                            
-
-                                            <!-- <td class="action">
-
-                                                <a href='unloading_checkpost1_add.php?id=<?php echo $row["id"] ?>' class="get_id"><i
-                                                        class="material-icons">edit</i></a>
-                                                <a href='unloading_checkpost1_add.php?id=<?php echo $row["id"] ?>&type=delete'
-                                                    class="get_id"><i class="material-icons">delete</i></a>
-                                                <a href='javascript:void(0)' class="get_id"
-                                                    data-id='<?php echo $row["id"] ?>' data-toggle="modal"
-                                                    data-target="#myModal"><i class="material-icons">preview</i></a>
-                                            </td> -->
+                                           <?php 
+                                           if($row['status'] == 'open'){
+                                           ?>
+                                            <td><a href="#" onclick="alert('Open Your Rake First');" class="btn btn-danger btn-sm">No Entry</a></td>
+                                       <?php }else{ ?>
+                                       <td><a href="loading_vehicle_entry.php?id=<?php echo $row["id"] ?>" class="btn btn-success btn-sm">Vehicle Entry</a></td>
+                                       <?php } ?>
                                         </tr>
 
-                                        <?php } ?>
+                                        <?php $s++;} ?>
 
                                     </tbody>
                                 </table>
@@ -137,6 +121,7 @@ include_once('includes/db.php');
             </div>
         </div>
     </div>
+
 
     <script>
     $(document).ready(function() {

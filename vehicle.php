@@ -54,6 +54,7 @@ include_once('includes/db.php');
                                 <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                                     <thead>
                                         <tr>
+                                            <th>SNO</th>
                                             <th>Vehicle_No</th>
                                             <th>Vehicle_Type</th>
                                             <th>Regn_Address</th>
@@ -89,13 +90,13 @@ include_once('includes/db.php');
 
                                     <tbody>
                                         <?php
-
+                                    $s=1;
                                     $sql=mysqli_query($conn,"select * from `vehicle_reg`");
                                     while($row=mysqli_fetch_assoc($sql))
                                     {
                                     ?>
                                         <tr>
-                                          
+                                              <th><?php echo $s; ?></th>
                                             <th><?php echo $row['Vehicle_No']; ?></th>
                                             <th><?php echo $row['Vehicle_Type']; ?></th>
                                             <th><?php echo $row['Regn_Address']; ?></th>
@@ -134,7 +135,7 @@ include_once('includes/db.php');
                                             </td>
                                         </tr>
 
-                                        <?php } ?>
+                                        <?php $s++;} ?>
 
                                     </tbody>
                                 </table>

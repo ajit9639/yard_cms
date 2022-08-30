@@ -48,7 +48,7 @@
                                     <thead>
                                         <tr>
 
-
+                                            <th>SNO</th>
                                             <th>Kata Slip No</th>
                                             <th>Company Challan No</th>
                                             <th>Vehicle_No</th>
@@ -69,13 +69,13 @@
 
                                     <tbody>
                                         <?php
-
+                            $s=1;
                             $sql=mysqli_query($conn,"SELECT * FROM `loading_vehicle_entry` where `rake_ref_id`='$id'");
                             while($row=mysqli_fetch_assoc($sql))
                             {
                             ?>
                                         <tr>
-
+                                            <td><?php echo $s; ?></td>
                                             <td><?php echo $row['kata_slip_no']; ?></td>
                                             <td><?php echo $row['c_challan_no']; ?></td>
                                             <td><?php echo $row['Vehicle']; ?></td>
@@ -90,23 +90,16 @@
                                             
                                                                                                                                                                               
                                             <td class="action">
-
-                                                <!-- <a href='unloading_checkpost1_add.php?id=<?php echo $row["id"] ?>' class="get_id"><i
-                                                class="material-icons">edit</i></a> -->
                                                 <a href='loading_vehicle_entry.php?id=<?php echo $row["id"] ?>&type=delete'
                                                     class="get_id"><i class="material-icons">delete</i></a>
 
                                                     <a href='loading_vehicle_entry_update.php?id=<?php echo $row["id"] ?>'
                                                     class="get_id"><i class="material-icons">edit</i></a>
-
-                                                <!-- <a href='javascript:void(0)' class="get_id"
-                                            data-id='<?php echo $row["id"] ?>' data-toggle="modal"
-                                            data-target="#myModal"><i class="material-icons">preview</i></a> -->
                                             </td>
                                             <td><a href="" class="btn btn-success">Print</a></td>
                                         </tr>
 
-                                        <?php } ?>
+                                        <?php $s++;} ?>
 
                                     </tbody>
                                 </table>

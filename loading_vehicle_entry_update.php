@@ -81,7 +81,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="dump" name="dump" class="form-control"
-                                            value="<?php echo @$data['dump']; ?>" required>
+                                            value="<?php echo @$data['dump']; ?>" >
                                         <label class="form-label">dump</label>
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="Vehicle" name="Vehicle" class="form-control"
-                                            value="<?php echo @$data['Vehicle']; ?>" required>
+                                            value="<?php echo @$data['Vehicle']; ?>" >
                                         <label class="form-label">Vehicle</label>
                                     </div>
                                 </div>
@@ -98,7 +98,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="date" id="Date" name="Date" class="form-control"
-                                            value="<?php echo @$data['Date']; ?>" required>
+                                            value="<?php echo @$data['Date']; ?>" >
                                         <label class="form-label">Date</label>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="kata_slip_no" name="kata_slip_no" class="form-control"
-                                            value="<?php echo @$data['kata_slip_no']; ?>" required>
+                                            value="<?php echo @$data['kata_slip_no']; ?>" >
                                         <label class="form-label">kata_slip_no</label>
                                     </div>
                                 </div> 
@@ -116,7 +116,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="c_challan_no" name="c_challan_no" class="form-control"
-                                            value="<?php echo @$data['c_challan_no']; ?>" required>
+                                            value="<?php echo @$data['c_challan_no']; ?>" >
                                         <label class="form-label">c_challan_no</label>
                                     </div>
                                 </div> 
@@ -125,7 +125,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="driver_licence_no" name="driver_licence_no" class="form-control"
-                                            value="<?php echo @$data['driver_licence_no']; ?>" required>
+                                            value="<?php echo @$data['driver_licence_no']; ?>" >
                                         <label class="form-label">driver_licence_no</label>
                                     </div>
                                 </div> 
@@ -134,7 +134,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="tare_weight" name="tare_weight" class="form-control"
-                                            value="<?php echo @$data['tare_weight']; ?>" required>
+                                            value="<?php echo @$data['tare_weight']; ?>" >
                                         <label class="form-label">tare_weight</label>
                                     </div>
                                 </div> 
@@ -143,7 +143,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="gross_weight" name="gross_weight" class="form-control"
-                                            value="<?php echo @$data['gross_weight']; ?>" required>
+                                            value="<?php echo @$data['gross_weight']; ?>" >
                                         <label class="form-label">gross_weight</label>
                                     </div>
                                 </div>  
@@ -151,7 +151,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="net_weight" name="net_weight" class="form-control"
-                                            value="<?php echo @$data['net_weight']; ?>" required>
+                                            value="<?php echo @$data['net_weight']; ?>" >
                                         <label class="form-label">net_weight</label>
                                     </div>
                                 </div>  
@@ -160,7 +160,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="remark" name="remark" class="form-control"
-                                            value="<?php echo @$data['remark']; ?>" required>
+                                            value="<?php echo @$data['remark']; ?>" >
                                         <label class="form-label">remark</label>
                                     </div>
                                 </div>  
@@ -168,7 +168,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="material" name="material" class="form-control"
-                                            value="<?php echo @$data['material']; ?>" required>
+                                            value="<?php echo @$data['material']; ?>" >
                                         <label class="form-label">material</label>
                                     </div>
                                 </div>
@@ -177,7 +177,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="company" name="company" class="form-control"
-                                            value="<?php echo @$data['company']; ?>" required>
+                                            value="<?php echo @$data['company']; ?>" >
                                         <label class="form-label">company</label>
                                     </div>
                                 </div>

@@ -1,6 +1,6 @@
 <?php include_once('includes/header.php');
-include_once('includes/check_login.php');?>
-
+include_once('includes/check_login.php');
+ include_once('includes/footer.php'); ?>
 
 <html>
 <head>
@@ -107,62 +107,10 @@ font-weight:600;
             <div class="body">
             <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-6 dashboard-box">
-                    <div class="green spc">
-<!-- <h3> <?php //$cr_query=mysqli_fetch_assoc(mysqli_query($conn,"select count(id) as total from User;")); $credit_amount=$cr_query['total'];    echo $credit_amount; ?> 
-                    </h3> -->
-                    <a href="user_list.php"> 
-                    <img src="images/driverlist.png"  style="width:60px;"/>
-                    <h3>Driver Lists</h3>
-                    </a>
-                 </div>
-                 <!-- <div class="grey"><a href="user_list.php">Full Detail <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> -->
-                </div>
-                <div class="col-sm-6 dashboard-box">
-                    <div class="yellow spc">
-                    
-<!-- <h3> <?php// $cr_query=mysqli_fetch_assoc(mysqli_query($conn,"select count(id) as total from txn_logs;"));  $credit_amount=$cr_query['total']; echo $credit_amount; ?>  </h3> -->
-<a href="bookings_list.php">
-                    <img src="images/bookings.png"  style="width:60px;"/>
-                    <h3> Oncall Bookings </h3>
-                    </a>
-                    </div>
-                    <!-- <div class="grey"><a href="bookings_list.php">Full Detail <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> -->
-                </div>
-                <div class="col-sm-6 dashboard-box">
-                    <div class="red spc">
-                    
-                   <!-- <h3> <?php $cr_query=mysqli_fetch_assoc(mysqli_query($conn,"select sum(Advance_Amount) as total from expense_tbl;")); 
-                   // $cr_query2=mysqli_fetch_assoc(mysqli_query($conn,"select sum(Night_Stay) as total2 from expense_tbl;"));
-                   // $cr_query3=mysqli_fetch_assoc(mysqli_query($conn,"select sum(Fuel_Expense) as total3 from expense_tbl;"));
-                   // $cr_query4=mysqli_fetch_assoc(mysqli_query($conn,"select sum(Parking_Expense) as total4 from expense_tbl;"));
-                   // $cr_query5=mysqli_fetch_assoc(mysqli_query($conn,"select sum(Misc_Expense) as total5 from expense_tbl;"));
-                   // $credit_amount=$cr_query['total'];
-                   // $credit_amount2=$cr_query['total2'];
-                   // $credit_amount3=$cr_query['total3'];
-                   // $credit_amount4=$cr_query['total4'];
-                   // $credit_amount5=$cr_query['total5'];
-                   // $final = $credit_amount + $credit_amount2 + $credit_amount3 + $credit_amount4 + $credit_amount5;
-                   // echo $final; ?> 
-                    </h3> -->
-                    <a href="expense_register.php">
-                    <img src="images/expences.png"  style="width:60px;"/>
-                    <h3>Total Expenses</h3>
-                    </a>
-                    </div>
-                    <!-- <div class="grey"><a href="expense_register.php">Full Detail <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> -->
-                </div>
-                <div class="col-sm-6 dashboard-box">
-                    <div class="purple spc">
-                    
-  <!-- <h3> <?php// $cr_query=mysqli_fetch_assoc(mysqli_query($conn,"select count(id) as total from trip_tbl;")); $credit_amount=$cr_query['total']; echo $credit_amount; ?>  </h3> -->
-  <a href="trip_register.php">
-                    <img src="images/trip.png"  style="width:60px;"/>
-                    <h3>Total Booked Trips</h3>
-                    </a>
-                    </div>
-                    <!-- <div class="grey"><a href="trip_register.php">Full Detail <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> -->
-                </div> 
+                
+                
+               
+                
             </div>    
             </div></div>
             <!-- <div class="body">
@@ -206,7 +154,7 @@ font-weight:600;
 </div>
 </section> -->
 
-<?php include_once('includes/footer.php'); ?>
+
 <script type="text/javascript">
 
 </script>

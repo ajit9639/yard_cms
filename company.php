@@ -1,8 +1,6 @@
 <?php include_once('includes/header.php');
 include_once('includes/check_login.php');
 include_once('includes/db.php');
-
-
 ?>
 
 <body class="theme-red">
@@ -46,15 +44,17 @@ include_once('includes/db.php');
                                 <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                                     <thead>
                                         <tr>
-
+                                            <th>SNO</th>
                                             <th>Name</th>
                                             <th>Address</th>
+                                            <th>Operating Address</th>
+                                            <th>GST Address</th>
                                             <th>City</th>
                                             <th>State</th>
-                                            <th>State_Code</th>
+                                            <th>GSTIN</th>
                                             <th>Pin_Code</th>
                                             <th>Mobile_No</th>
-                                            <th>alternate_Mobile_No</th>
+                                            <th>Whatsapp_No</th>
                                             <th>E_mail</th>
                                             <th>Website</th>
 
@@ -64,15 +64,18 @@ include_once('includes/db.php');
 
                                     <tbody>
                                         <?php
-
+                                    $s = 1;
                                     $sql=mysqli_query($conn,"select * from `company`");
                                     while($row=mysqli_fetch_assoc($sql))
                                     {
                                     ?>
                                         <tr>
-
+                                            <th><?php echo $s; ?></th>        
                                             <th><?php echo $row['Name']; ?></th>
                                             <th><?php echo $row['Address']; ?></th>
+                                            <th><?php echo $row['oppaddress']; ?></th>
+                                            <th><?php echo $row['gstaddress']; ?></th>
+                                          
                                             <th><?php echo $row['City']; ?></th>
                                             <th><?php echo $row['State']; ?></th>
                                             <th><?php echo $row['State_Code']; ?></th>
@@ -95,7 +98,9 @@ include_once('includes/db.php');
                                             </td>
                                         </tr>
 
-                                        <?php } ?>
+                                        <?php 
+                                        $s++;
+                                        } ?>
 
                                     </tbody>
                                 </table>

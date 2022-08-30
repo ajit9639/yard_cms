@@ -50,8 +50,15 @@ if(isset($_POST['vehicle_in_unloading'])){
                     <div class="card" id="card">
                         <div class="header">
                             <h2 class="text-center">
-                                Vehicle In
+                           <?php                            							 
+                           $count = mysqli_fetch_assoc(mysqli_query($conn,"select COUNT(`id`) as 'cid' from `unloading_vehicle_in_temp` where `unloading_ref_id`='$id' AND `status`='0'"));
+                           $d = $count['cid'];
+                            ?>
+                              Vehicle In : <?=$d ?>
                             </h2>
+                          <h5>
+                          
+                          </h5>
                             <!-- <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="unloading_checkpost1_add.php">
@@ -66,6 +73,7 @@ if(isset($_POST['vehicle_in_unloading'])){
                                 <table class="table table-bordered table-striped table-hover ">
                                     <thead>
                                         <tr>
+                                            <th>SNO</th>
                                             <th>Action</th>
                                             <th>Vehicle_No</th>
                                             <th>Vehicle Type</th>
@@ -83,17 +91,19 @@ if(isset($_POST['vehicle_in_unloading'])){
 
                                     <tbody>
                                         <?php
-
+                                $s=1;
                                 $sql=mysqli_query($conn,"select * from `unloading_vehicle_in_temp` where `unloading_ref_id`='$id' AND `status`='0'");
                                 while($row=mysqli_fetch_assoc($sql))
                                 {
                                 ?>
                                         <tr>
-                                            <td><a style="padding:5px; padding-left:15px; padding-right:15px; font-size:14px;"
-                                                    class="btn btn-info btn-lg btn-sm" data-toggle="modal"
-                                                    data-target="#myModal" href="javascript:void(0);">Out</a></td>
+                                            <td><?php echo $s; ?></td>
+                                            <td>
+                                              <a href='unloading_vehicle_out_form.php?id=<?php echo $row["id"] ?>'
+                                                    class="btn btn-info btn-lg btn-sm">Out</a>
+                                          </td>
                                             <td><?php echo $row['Vehicle_No']; ?></td>
-                                            <td><?php echo $row['loading_slip_no']; ?></td>
+                                            <td><?php echo $row['vehicle_type']; ?></td>
                                             <!-- <td><a href="" class="btn btn-danger">OUT</a></td> -->
 
                                             <td><?php echo $row['loading_slip_no']; ?></td>
@@ -122,7 +132,7 @@ if(isset($_POST['vehicle_in_unloading'])){
 
                                         </tr>
 
-                                        <?php } ?>
+                                        <?php $s++;} ?>
 
                                     </tbody>
                                 </table>

@@ -1,12 +1,14 @@
-<?php
-include_once('includes/header.php');
+<?php include_once('includes/header.php');
 include_once('includes/check_login.php');
+include_once('includes/db.php');
 
 $id=$_GET['id'];
 
 $rake_open_data=mysqli_fetch_assoc(mysqli_query($conn,"SELECT * FROM `unloading_rake_opening` WHERE `id`='$id'"));
-echo $type = $_GET['type'];
+$type = $_GET['type'];
 // delete
+$types = $_GET['type'];
+
 if($type == 'delete'){
 $del = mysqli_query($conn, "DELETE FROM `unloading_vehicle_in_temp` WHERE `id`='$id'");
 if($del){
@@ -39,53 +41,8 @@ if($insert){
 }
 }
 
-// if(isset($_GET['id']))
-// {
-//     $uid=$_GET['id'];
-//     $data=mysqli_fetch_assoc(mysqli_query($conn,"select * from `unloading_vehicle_entry` where id='$uid'"));
-// }
 }
 ?>
-
-<!-- model vehicle out -->
-<!-- Modal -->
-<div class="modal fade" id="myModal1" role="dialog">
-    <div class="modal-dialog modal-md">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Vehicle Kata Entry</h4>
-            </div>
-            <div class="modal-body">
-                <form method="POST">
-                    <div class="row">
-                        <div class="col-sm-6 ">
-                            <label for="pwd">Out Kata Slip No:</label>
-                            <input type="text" class="form-control" name="challn_no" required>
-                        </div>
-
-                        <div class="col-sm-6 ">
-                            <label for="pwd">Tare Weight:</label>
-                            <input type="text" class="form-control" name="tare_weight" required>
-                        </div>
-
-                        <div class="col-sm-6 ">
-                            <label for="pwd">Gross Weight:</label>
-                            <input type="text" class="form-control" name="gross_weight" required>
-                        </div>
-
-                        <div class="col-sm-12 ">
-
-                            <input type="submit" class="btn btn-danger" name="vehicle_kata_entry" value="submit">
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- //model vehicle out -->
 
 
 <body class="theme-red">
@@ -120,7 +77,12 @@ if($insert){
                     <div class="card" id="card">
                         <div class="header">
                             <h2 class="text-center">
-                                Unloading Kata Entry
+                               <?php
+                              //echo "SELECT count(`id`) FROM `unloading_vehicle_in_temp` where `unloading_ref_id`='$id' AND `kata_status`='0'";exit();
+                              $count = mysqli_fetch_assoc(mysqli_query($conn,"SELECT count(`id`) FROM `unloading_vehicle_in_temp` where `unloading_ref_id`='$id' AND `kata_status`='0'"));
+                              ?>
+                                Unloading Kata Entry <?= $count?>
+                              
                             </h2>
 
                         </div>
@@ -135,24 +97,35 @@ if($insert){
 
                                         <div class="col-md-2">
                                             <h4 class="title">Select RR_NO : </h4>
-
                                         </div>
-
-                                        <div class="col-md-6">
+  
+                                        <div class="col-md-4">                                                                                                                           
                                             <!-- <h4>Select RR_NO : </h4> -->
-                                            <select class="form-control" id="dynamic_select">
-                                                <option>Select RR_NO</option>
-
+                                           <select class="form-control" onchange="location = this.value;"> 
+                                                 <option value="">Select RR_NO</option>
                                                 <?php $sql=mysqli_query($conn,"select * from `unloading_rake_opening`");
-                                    while($row=mysqli_fetch_assoc($sql))
-                                    {?>
-                                                <option value="unloading_kata_entry.php?id=<?php echo $row['id']; ?>"
-                                                    style="font-size: 18px;font-weight: 700;">
+                                  			
+                                             while($row=mysqli_fetch_assoc($sql)){?>                                                                                    
+                                                <option value="unloading_kata_entry.php?id=<?php echo $row['id']; ?>" style="font-size: 18px;font-weight: 700;">
                                                     <?php echo $row['RR_No'] .' / '. $row['Company'] .' / '. $row['Material'] . ' / ' . $row['RR_Date'] ?>
                                                 </option>
                                                 <?php } ?>
+                                             
                                             </select>
                                         </div>
+                                        
+                                         <div class="col-md-1">
+                                            <h4 class="title">=>></h4>
+                                        </div>
+                                        
+                                        <div class="col-md-5">
+                                            <h4 class="title"><b style="
+    border: 2px solid;
+    background: #6a6a6a;
+    color: #fff;
+"><?php echo @$rake_open_data['RR_No'] .' / '. @$rake_open_data['Company'] .' / '. @$rake_open_data['Material'] . ' / ' . @$rake_open_data['RR_Date'] ?></b></h4>
+                                        </div>
+                                        
                                     </div>
                                     <div class="row headline">
 
@@ -195,21 +168,12 @@ if($insert){
     <?php 
      include "unloading_kata_entry_vehicle_in.php";
      include "unloading_kata_entry_vehicle_out.php";
-    include_once('includes/footer.php'); ?>
+    ?>
 
-    <script>
-    $(function() {
-        // bind change event to select
-        $('#dynamic_select').on('change', function() {
-            var url = $(this).val(); // get selected value
-            if (url) { // require a URL
-                window.location = url; // redirect
-            }
-            return false;
-        });
-    });
-    </script>
+ 
 
 </body>
-
+<?php 
+include_once('includes/footer.php');
+?>
 </html>

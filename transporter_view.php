@@ -10,7 +10,10 @@ while($row = mysqli_fetch_assoc($result)) {
  
 // $output .= "<div class='row'><div class='col-sm-6'>Id: ".$row["id"]."</div><div class='col-sm-6'>Name ".$row["guest"]."</div></div><div class='row'> <div class='col-sm-6'>Gender: ".$row["journey_type"]."</div></div><div class='row'><div class='col-sm-6'>Designation: ".$row["total_km"]."</div><div class='col-sm-6'>age: ".$row["total_km"]."</div></div><div class='row'><div class='col-sm-12'></div></div>";
 $output .= 
-"<table class='table table-bordered display-tables'>"
+"<h5 style='
+    text-align: center;
+    font-weight: 800;
+'>Transporter Detail</h5><table class='table table-bordered display-tables'>"
 
 
 
@@ -56,13 +59,40 @@ $output .=
 ."<tr>"
 
 ."</table>";
+ }
+$sql1 = "SELECT * FROM `transporter_employee` where `employee_ref_id`=".$rec_id;
+$result1 = mysqli_query($conn, $sql1);
+
+while($row1 = mysqli_fetch_assoc($result1)) {
+$output1 .= 
+"<h5 style='
+    text-align: center;
+    font-weight: 800;
+'>Employee Detail</h5><table class='table table-bordered display-tables'>"
 
 
 
-
+."<tr>".
+"<th>"."employee_name"."</th>".
+"<td>".$row1["employee_name"]."</td>"."</tr>"
+."<tr>"
+.
+"<th>"."employee_number"."</th>".
+"<td>".$row1["employee_number"]."</td>"."</tr>"
+."<tr>".
+"<th>"."employee_email"."</th>".
+"<td>".$row1["employee_email"]."</td>"."</tr>"
+  
+  
+  ."<tr>".
+"<th>"."employee_designation"."</th>".
+"<td>".$row1["employee_designation"]."</td>"."</tr>"
+ 
+."</table>";
 
  }
 echo $output;
+echo $output1;
  
 mysqli_close($conn);
 ?>

@@ -144,7 +144,7 @@ $unloading_ref_id = $id;
                                 </div> -->
 
                                 <div class="demo-radio-button">
-                                    <input name="dump" type="radio" id="Checkpost" value="Checkpost">
+                                    <input name="dump" type="radio" id="Checkpost" value="Checkpost" checked>
                                     <label for="Checkpost">Checkpost</label>
                                     <input name="dump" type="radio" id="Direct" value="Direct">
                                     <label for="Direct">Direct</label>
@@ -155,7 +155,7 @@ $unloading_ref_id = $id;
                                 <!-- <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="dump" name="dump" class="form-control"
-                                            value="<?php echo @$data['dump']; ?>" required>
+                                            value="<?php echo @$data['dump']; ?>" >
                                         <label class="form-label">dump.</label>
                                     </div>
                                 </div> -->
@@ -163,8 +163,20 @@ $unloading_ref_id = $id;
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Vehicle_No" name="Vehicle_No" class="form-control"
-                                            value="<?php echo @$data['Vehicle_No']; ?>" required>
+                                       <!-- <input type="text" id="Vehicle_No" name="Vehicle_No" class="form-control"
+                                            value="<?php echo @$data['Vehicle_No']; ?>" >-->
+                                      
+                                       <select name="Vehicle_No" id="" class="form-control" >
+                                            <option selected> Select Vehicle_No</option>
+                                            <?php 
+                                                $daata = mysqli_query($conn , "SELECT * FROM `vehicle_reg`");
+                                                while($get_type = mysqli_fetch_assoc($daata)){
+                                                ?>
+                                            <option value="<?php echo $get_type['Vehicle_No']?>">
+                                                <?php echo $get_type['Vehicle_No']?></option>
+                                            <?php } ?>
+                                        </select>
+                                      
                                         <label class="form-label">Vehicle ID/No.</label>
                                     </div>
                                 </div>
@@ -172,8 +184,8 @@ $unloading_ref_id = $id;
 
                                 <div class="form-group form-float">
                                     <div class="form-line focused">
-                                        <input type="Date" id="Date" name="Date" class="form-control"
-                                            value="<?php echo @$data['Date']; ?>" required>
+                                        <input type="datetime-local" id="Date" name="Date" class="form-control"
+                                            value="<?php echo @$data['Date']; ?>" >
                                         <label class="form-label">Date</label>
                                     </div>
                                 </div>
@@ -184,7 +196,7 @@ $unloading_ref_id = $id;
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="kata_slip_no" name="kata_slip_no" class="form-control"
-                                            value="<?php echo @$data['kata_slip_no']; ?>" required>
+                                            value="<?php echo @$data['kata_slip_no']; ?>" >
                                         <label class="form-label">KATA Slip No</label>
                                     </div>
                                 </div>
@@ -194,7 +206,7 @@ $unloading_ref_id = $id;
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="C_challan_No" name="C_challan_No" class="form-control"
-                                            value="<?php echo @$data['C_challan_No']; ?>" required>
+                                            value="<?php echo @$data['C_challan_No']; ?>" >
                                         <label class="form-label">Company Challan No</label>
                                     </div>
                                 </div>
@@ -204,7 +216,7 @@ $unloading_ref_id = $id;
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="Gross" name="Gross" class="form-control"
-                                            value="<?php echo @$data['Gross']; ?>" required>
+                                            value="<?php echo @$data['Gross']; ?>" >
                                         <label class="form-label">Gross Weight (in ton)</label>
                                     </div>
                                 </div>
@@ -212,7 +224,7 @@ $unloading_ref_id = $id;
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="Tare_Weight" name="Tare_Weight" class="form-control"
-                                            value="<?php echo @$data['Tare_Weight']; ?>" required onchange="javascript:calcu()">
+                                            value="<?php echo @$data['Tare_Weight']; ?>"  onchange="javascript:calc()">
                                         <label class="form-label">Tare Weight</label>
                                     </div>
                                 </div>
@@ -233,7 +245,7 @@ $unloading_ref_id = $id;
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="D_License_No" name="D_License_No" class="form-control"
-                                            value="<?php echo @$data['D_License_No']; ?>" required>
+                                            value="<?php echo @$data['D_License_No']; ?>" >
                                         <label class="form-label">Driver License License No</label>
                                     </div>
                                 </div>
@@ -241,7 +253,7 @@ $unloading_ref_id = $id;
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="Remarks" name="Remarks" class="form-control"
-                                            value="<?php echo @$data['Remarks']; ?>" required>
+                                            value="<?php echo @$data['Remarks']; ?>" >
                                         <label class="form-label">Remarks</label>
                                     </div>
                                 </div>
@@ -311,8 +323,19 @@ $unloading_ref_id = $id;
    
     include_once('includes/footer.php'); ?>
 
-
-
+							<script type="text/javascript">
+    function calc() {
+        
+        var Gross = document.getElementById("Gross").value;
+        var Tare_Weight = document.getElementById("Tare_Weight").value;
+        var net = parseInt(Gross) - parseInt(Tare_Weight);
+        document.getElementById("Net_weight").value = net;  
+        
+        console.log(Gross);
+        console.log(Tare_Weight);
+        console.log(net);
+    }
+    </script>
 </body>
 
 </html>

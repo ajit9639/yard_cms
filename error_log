@@ -1,0 +1,405 @@
+[29-Jul-2022 20:42:10 Asia/Kolkata] PHP Fatal error:  Can't use function return value in write context in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 13
+[29-Jul-2022 20:43:16 Asia/Kolkata] PHP Parse error:  syntax error, unexpected ';' in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 4
+[29-Jul-2022 20:43:19 Asia/Kolkata] PHP Parse error:  syntax error, unexpected ';' in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 4
+[29-Jul-2022 20:43:39 Asia/Kolkata] PHP Parse error:  syntax error, unexpected token ";" in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 4
+[29-Jul-2022 20:47:33 Asia/Kolkata] PHP Parse error:  syntax error, unexpected token "{" in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 3
+[29-Jul-2022 20:47:38 Asia/Kolkata] PHP Parse error:  syntax error, unexpected token "{" in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 3
+[29-Jul-2022 21:47:54 Asia/Kolkata] PHP Warning:  Undefined variable $_SESSION in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 10
+[29-Jul-2022 21:47:54 Asia/Kolkata] PHP Warning:  Undefined variable $conn in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 14
+[29-Jul-2022 21:47:54 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php:14
+Stack trace:
+#0 /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php(14): mysqli_query()
+#1 {main}
+  thrown in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 14
+[29-Jul-2022 21:50:55 Asia/Kolkata] PHP Warning:  Array to string conversion in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 3
+[29-Jul-2022 21:50:55 Asia/Kolkata] PHP Warning:  Undefined variable $conn in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 14
+[29-Jul-2022 21:50:55 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php:14
+Stack trace:
+#0 /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php(14): mysqli_query()
+#1 {main}
+  thrown in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 14
+[29-Jul-2022 21:51:00 Asia/Kolkata] PHP Warning:  Array to string conversion in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 3
+[29-Jul-2022 21:51:07 Asia/Kolkata] PHP Warning:  Array to string conversion in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 3
+[29-Jul-2022 21:51:07 Asia/Kolkata] PHP Warning:  Undefined variable $conn in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 14
+[29-Jul-2022 21:51:07 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php:14
+Stack trace:
+#0 /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php(14): mysqli_query()
+#1 {main}
+  thrown in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 14
+[29-Jul-2022 21:51:58 Asia/Kolkata] PHP Warning:  Undefined variable $conn in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 15
+[29-Jul-2022 21:51:58 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php:15
+Stack trace:
+#0 /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php(15): mysqli_query()
+#1 {main}
+  thrown in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 15
+[29-Jul-2022 21:52:22 Asia/Kolkata] PHP Warning:  Undefined variable $conn in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 15
+[29-Jul-2022 21:52:22 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php:15
+Stack trace:
+#0 /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php(15): mysqli_query()
+#1 {main}
+  thrown in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 15
+[29-Jul-2022 21:52:55 Asia/Kolkata] PHP Warning:  Undefined variable $conn in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 15
+[29-Jul-2022 21:52:55 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php:15
+Stack trace:
+#0 /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php(15): mysqli_query()
+#1 {main}
+  thrown in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 15
+[29-Jul-2022 21:53:09 Asia/Kolkata] PHP Warning:  Undefined variable $conn in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 15
+[29-Jul-2022 21:53:09 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php:15
+Stack trace:
+#0 /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php(15): mysqli_query()
+#1 {main}
+  thrown in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 15
+[29-Jul-2022 21:54:55 Asia/Kolkata] PHP Warning:  Undefined variable $conn in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 16
+[29-Jul-2022 21:54:55 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php:16
+Stack trace:
+#0 /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php(16): mysqli_query()
+#1 {main}
+  thrown in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 16
+[29-Jul-2022 21:57:06 Asia/Kolkata] PHP Warning:  Undefined variable $conn in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 16
+[29-Jul-2022 21:57:06 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php:16
+Stack trace:
+#0 /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php(16): mysqli_query()
+#1 {main}
+  thrown in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 16
+[29-Jul-2022 21:57:14 Asia/Kolkata] PHP Warning:  Undefined variable $conn in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 16
+[29-Jul-2022 21:57:14 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php:16
+Stack trace:
+#0 /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php(16): mysqli_query()
+#1 {main}
+  thrown in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 16
+[29-Jul-2022 21:57:31 Asia/Kolkata] PHP Warning:  Undefined variable $conn in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 16
+[29-Jul-2022 21:57:31 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php:16
+Stack trace:
+#0 /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php(16): mysqli_query()
+#1 {main}
+  thrown in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 16
+[29-Jul-2022 21:58:02 Asia/Kolkata] PHP Warning:  Undefined variable $conn in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 16
+[29-Jul-2022 21:58:02 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php:16
+Stack trace:
+#0 /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php(16): mysqli_query()
+#1 {main}
+  thrown in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/index.php on line 16
+[29-Jul-2022 21:59:06 Asia/Kolkata] PHP Warning:  Undefined array key "id" in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[29-Jul-2022 22:01:22 Asia/Kolkata] PHP Warning:  Undefined array key "id" in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[29-Jul-2022 22:26:35 Asia/Kolkata] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/dashboard.php on line 2
+[29-Jul-2022 22:27:46 Asia/Kolkata] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/dashboard.php on line 2
+[29-Jul-2022 22:28:16 Asia/Kolkata] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/dashboard.php on line 2
+[29-Jul-2022 23:26:00 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[29-Jul-2022 23:26:00 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[30-Jul-2022 14:59:04 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[30-Jul-2022 14:59:04 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 9
+[30-Jul-2022 14:59:04 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[30-Jul-2022 14:59:04 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[30-Jul-2022 14:59:13 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[30-Jul-2022 14:59:13 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 9
+[30-Jul-2022 14:59:13 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[30-Jul-2022 14:59:13 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[30-Jul-2022 14:59:28 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[30-Jul-2022 14:59:28 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 9
+[30-Jul-2022 14:59:28 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[30-Jul-2022 14:59:28 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[30-Jul-2022 15:02:21 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[30-Jul-2022 15:02:21 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 9
+[30-Jul-2022 15:02:21 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 69
+[30-Jul-2022 15:02:21 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 70
+[30-Jul-2022 21:23:40 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[30-Jul-2022 21:23:40 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 9
+[30-Jul-2022 21:23:40 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[30-Jul-2022 21:23:40 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[30-Jul-2022 21:24:07 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[30-Jul-2022 21:24:07 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[30-Jul-2022 21:24:21 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[30-Jul-2022 21:24:21 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 9
+[30-Jul-2022 21:24:21 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[30-Jul-2022 21:24:21 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[30-Jul-2022 21:24:37 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[30-Jul-2022 21:24:37 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[30-Jul-2022 21:26:51 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[30-Jul-2022 21:26:51 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 9
+[30-Jul-2022 21:26:51 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[30-Jul-2022 21:26:51 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[30-Jul-2022 21:27:11 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[30-Jul-2022 21:27:11 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 9
+[30-Jul-2022 21:27:11 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 69
+[30-Jul-2022 21:27:11 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 70
+[30-Jul-2022 21:32:43 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[30-Jul-2022 21:32:43 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 9
+[30-Jul-2022 21:32:43 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[30-Jul-2022 21:32:43 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[30-Jul-2022 21:32:47 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[30-Jul-2022 21:32:47 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 9
+[30-Jul-2022 21:32:47 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[30-Jul-2022 21:32:47 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[30-Jul-2022 21:32:50 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[30-Jul-2022 21:32:50 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 9
+[30-Jul-2022 21:32:50 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[30-Jul-2022 21:32:50 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[30-Jul-2022 21:32:53 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[30-Jul-2022 21:32:53 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 9
+[30-Jul-2022 21:32:53 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[30-Jul-2022 21:32:53 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[30-Jul-2022 21:32:56 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[30-Jul-2022 21:32:56 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 9
+[30-Jul-2022 21:32:56 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[30-Jul-2022 21:32:56 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[30-Jul-2022 21:41:17 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[30-Jul-2022 21:41:17 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[30-Jul-2022 21:41:22 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[30-Jul-2022 21:41:22 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[31-Jul-2022 09:48:24 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[31-Jul-2022 09:48:24 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 9
+[31-Jul-2022 09:48:24 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 69
+[31-Jul-2022 09:48:24 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 70
+[31-Jul-2022 09:48:32 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[31-Jul-2022 09:48:32 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 9
+[31-Jul-2022 09:48:32 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 69
+[31-Jul-2022 09:48:32 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 70
+[31-Jul-2022 09:48:40 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[31-Jul-2022 09:48:40 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 9
+[31-Jul-2022 09:48:40 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 69
+[31-Jul-2022 09:48:40 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 70
+[31-Jul-2022 09:54:36 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[31-Jul-2022 09:54:36 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 9
+[31-Jul-2022 09:54:36 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 29
+[31-Jul-2022 09:54:36 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 30
+[31-Jul-2022 09:55:08 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[31-Jul-2022 09:55:08 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 9
+[31-Jul-2022 09:55:08 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 29
+[31-Jul-2022 09:55:08 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 30
+[31-Jul-2022 09:55:41 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[31-Jul-2022 09:55:41 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 9
+[31-Jul-2022 09:55:41 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 29
+[31-Jul-2022 09:55:41 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 30
+[31-Jul-2022 09:56:18 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[31-Jul-2022 09:56:18 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 9
+[31-Jul-2022 09:56:18 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 29
+[31-Jul-2022 09:56:18 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 30
+[01-Aug-2022 10:37:54 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '?>' in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_add.php on line 127
+[01-Aug-2022 10:39:14 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '?>' in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_add.php on line 127
+[01-Aug-2022 10:40:21 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '?>' in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_add.php on line 125
+[01-Aug-2022 10:41:18 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '?>' in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_add.php on line 127
+[01-Aug-2022 10:48:29 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[01-Aug-2022 10:48:29 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[01-Aug-2022 10:48:32 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[01-Aug-2022 10:48:32 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[01-Aug-2022 10:54:03 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 10:54:03 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_view.php on line 9
+[01-Aug-2022 10:54:03 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_view.php on line 128
+[01-Aug-2022 10:54:03 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_view.php on line 129
+[01-Aug-2022 10:57:03 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/driver_view.php on line 85
+[01-Aug-2022 10:57:03 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/driver_view.php on line 86
+[01-Aug-2022 10:57:13 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 10:57:13 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 9
+[01-Aug-2022 10:57:13 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 29
+[01-Aug-2022 10:57:13 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 30
+[01-Aug-2022 10:57:19 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 10:57:19 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 9
+[01-Aug-2022 10:57:19 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 29
+[01-Aug-2022 10:57:19 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 30
+[01-Aug-2022 10:58:02 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 10:58:02 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 9
+[01-Aug-2022 10:58:02 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 29
+[01-Aug-2022 10:58:02 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 30
+[01-Aug-2022 10:58:23 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 10:58:23 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 9
+[01-Aug-2022 10:58:23 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 29
+[01-Aug-2022 10:58:23 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 30
+[01-Aug-2022 10:59:11 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 10:59:11 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/boxtype_view.php on line 9
+[01-Aug-2022 10:59:11 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/boxtype_view.php on line 29
+[01-Aug-2022 10:59:11 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/boxtype_view.php on line 30
+[01-Aug-2022 10:59:14 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 10:59:14 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/boxtype_view.php on line 9
+[01-Aug-2022 10:59:14 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/boxtype_view.php on line 29
+[01-Aug-2022 10:59:14 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/boxtype_view.php on line 30
+[01-Aug-2022 10:59:57 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 10:59:57 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/boxtype_view.php on line 9
+[01-Aug-2022 10:59:57 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/boxtype_view.php on line 29
+[01-Aug-2022 10:59:57 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/boxtype_view.php on line 30
+[01-Aug-2022 11:00:04 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/boxtype_view.php on line 29
+[01-Aug-2022 11:00:04 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/boxtype_view.php on line 30
+[01-Aug-2022 11:01:01 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:01:01 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/boxtype_view.php on line 9
+[01-Aug-2022 11:01:01 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/boxtype_view.php on line 29
+[01-Aug-2022 11:01:01 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/boxtype_view.php on line 30
+[01-Aug-2022 11:09:56 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:09:56 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/billinghead_view.php on line 9
+[01-Aug-2022 11:09:56 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/billinghead_view.php on line 29
+[01-Aug-2022 11:09:56 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/billinghead_view.php on line 30
+[01-Aug-2022 11:10:07 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:10:07 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/billinghead_view.php on line 9
+[01-Aug-2022 11:10:07 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/billinghead_view.php on line 29
+[01-Aug-2022 11:10:07 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/billinghead_view.php on line 30
+[01-Aug-2022 11:12:12 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:12:12 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:12:28 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:12:28 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:12:28 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:12:28 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:12:32 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:12:32 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:12:32 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:12:32 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:12:46 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:12:46 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:12:46 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:12:46 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:13:21 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:13:21 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 9
+[01-Aug-2022 11:13:21 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[01-Aug-2022 11:13:21 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[01-Aug-2022 11:17:00 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:17:00 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:17:00 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:17:00 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:17:00 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:17:00 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:17:00 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:17:00 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:23:31 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:23:31 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:23:31 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:23:31 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:23:31 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:23:31 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:23:31 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:23:31 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:24:06 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:24:06 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:24:06 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:24:06 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:24:06 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:24:06 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:24:06 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:24:06 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:27:15 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:27:15 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:27:16 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:27:16 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:27:16 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:27:16 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:27:16 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:27:16 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:31:51 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:31:51 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:31:51 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:31:51 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:31:51 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:31:51 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:31:51 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:31:51 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:33:11 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:33:11 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:33:11 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:33:11 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:33:11 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:33:11 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:33:11 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:33:11 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:40:11 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:40:11 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:40:11 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:40:11 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:40:11 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:40:11 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 11:40:11 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 11:40:11 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 11:57:15 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 11:57:15 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/loading_rake_opening_view.php on line 7
+[01-Aug-2022 11:57:15 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/loading_rake_opening_view.php on line 43
+[01-Aug-2022 11:57:15 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/loading_rake_opening_view.php on line 44
+[01-Aug-2022 12:10:13 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 12:10:13 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 12:10:13 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 12:10:13 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 12:10:13 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 12:10:13 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 12:10:13 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 12:10:13 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 12:22:37 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[01-Aug-2022 12:22:37 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[01-Aug-2022 12:23:16 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 12:23:16 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 9
+[01-Aug-2022 12:23:16 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 69
+[01-Aug-2022 12:23:16 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 70
+[01-Aug-2022 12:24:54 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 12:24:54 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 9
+[01-Aug-2022 12:24:54 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 69
+[01-Aug-2022 12:24:54 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 70
+[01-Aug-2022 12:25:07 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 12:25:07 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 9
+[01-Aug-2022 12:25:07 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 69
+[01-Aug-2022 12:25:07 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/transporter_view.php on line 70
+[01-Aug-2022 12:25:49 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 12:25:49 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 9
+[01-Aug-2022 12:25:49 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 29
+[01-Aug-2022 12:25:49 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_type_view.php on line 30
+[01-Aug-2022 12:39:03 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/driver_view.php on line 85
+[01-Aug-2022 12:39:03 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/driver_view.php on line 86
+[01-Aug-2022 12:41:24 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/driver_view.php on line 77
+[01-Aug-2022 12:41:24 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/driver_view.php on line 78
+[01-Aug-2022 12:42:14 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 12:42:14 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 9
+[01-Aug-2022 12:42:14 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 29
+[01-Aug-2022 12:42:14 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/material_view.php on line 30
+[01-Aug-2022 12:44:11 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 12:44:11 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 12:44:11 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 12:44:11 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 13:35:38 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 13:35:38 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 13:35:38 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 13:35:38 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 16:00:10 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 16:00:10 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_view.php on line 9
+[01-Aug-2022 16:00:10 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_view.php on line 128
+[01-Aug-2022 16:00:10 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/vehicle_view.php on line 129
+[01-Aug-2022 16:26:22 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 16:26:22 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 16:26:22 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 16:26:22 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 16:26:22 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 16:26:22 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 16:26:22 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 16:26:22 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 16:26:45 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 16:26:45 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 16:26:45 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 16:26:45 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 16:26:45 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 16:26:45 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 16:26:45 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 16:26:45 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 16:43:39 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 16:43:39 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 16:43:39 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 16:43:39 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 16:43:39 Asia/Kolkata] PHP Notice:  Undefined index: id in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/config.php on line 7
+[01-Aug-2022 16:43:39 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 9
+[01-Aug-2022 16:43:39 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 65
+[01-Aug-2022 16:43:39 Asia/Kolkata] PHP Notice:  Trying to access array offset on value of type null in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_view.php on line 66
+[01-Aug-2022 17:26:43 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/unloading_vehicle_out_form.php on line 55
+[01-Aug-2022 17:28:08 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/unloading_vehicle_out_form.php on line 53
+[01-Aug-2022 17:49:05 Asia/Kolkata] PHP Parse error:  syntax error, unexpected end of file in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/unloading_vehicle_out_form.php on line 219
+[03-Aug-2022 12:34:29 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '=' in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/unloading_rake_report_rate.php on line 289
+[03-Aug-2022 10:08:00 UTC] PHP Parse error:  syntax error, unexpected token ".", expecting end of file in /home/posigraph/public_html/yard/unloading_kata_entry.php on line 162
+[03-Aug-2022 11:12:42 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/posigraph/public_html/yard/unloading_kata_entry_vehicle_in.php on line 35
+[03-Aug-2022 11:12:42 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/posigraph/public_html/yard/unloading_kata_entry_vehicle_in.php on line 35
+[03-Aug-2022 11:12:42 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/posigraph/public_html/yard/unloading_kata_entry_vehicle_in.php on line 68
+[03-Aug-2022 11:12:42 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/posigraph/public_html/yard/unloading_kata_entry_vehicle_in.php on line 69
+[03-Aug-2022 11:13:13 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/posigraph/public_html/yard/unloading_kata_entry_vehicle_out.php on line 36
+[03-Aug-2022 11:13:13 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/posigraph/public_html/yard/unloading_kata_entry_vehicle_out.php on line 37
+[03-Aug-2022 11:13:13 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/posigraph/public_html/yard/unloading_kata_entry_vehicle_out.php on line 78
+[03-Aug-2022 11:13:13 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/posigraph/public_html/yard/unloading_kata_entry_vehicle_out.php on line 79
+[05-Aug-2022 15:30:21 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '.' in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/company_view.php on line 33
+[06-Aug-2022 01:06:12 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_add.php on line 59
+[06-Aug-2022 02:49:04 Asia/Kolkata] PHP Parse error:  syntax error, unexpected ')', expecting ';' in /home/naamyaafoundation/domains/naamyaafoundation.org/public_html/yard/rake_add.php on line 41
+[07-Aug-2022 21:38:38 UTC] PHP Parse error:  syntax error, unexpected '--' (T_DEC) in /home/posigraph/public_html/yard/rake_edit.php on line 299
+[07-Aug-2022 21:38:40 UTC] PHP Parse error:  syntax error, unexpected '--' (T_DEC) in /home/posigraph/public_html/yard/rake_edit.php on line 299
+[09-Aug-2022 10:27:07 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/posigraph/public_html/yard/unloading_rake_report_rate.php on line 291
+[10-Aug-2022 08:35:25 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/posigraph/public_html/yard/company_add.php on line 221
+[10-Aug-2022 08:35:28 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/posigraph/public_html/yard/company_add.php on line 221
+[10-Aug-2022 08:36:27 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/posigraph/public_html/yard/company_add.php on line 221
+[11-Aug-2022 12:23:24 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/posigraph/public_html/yard/rake_edit.php on line 395
+[11-Aug-2022 12:24:43 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/posigraph/public_html/yard/rake_edit.php on line 395

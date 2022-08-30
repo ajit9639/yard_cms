@@ -6,9 +6,9 @@ $id = $_GET['id'];
 $type = $_GET['type'];
 if ($type == 'delete') {
 
-    $del = mysqli_query($conn, "DELETE FROM `company` WHERE `id`='$id'");
+    $del = mysqli_query($conn, "DELETE FROM `transporter` WHERE `id`='$id'");
     if ($del) {
-        echo "<script>alert('Data Deleted Successfully');window.location='company.php';</script>";
+        echo "<script>alert('Data Deleted Successfully');window.location='transporter.php';</script>";
     } else {
         echo "<script>alert('Data Deleted Failed');</script>";
     }
@@ -20,6 +20,10 @@ if ($type == 'delete') {
 
         $Name = $_POST['Name'];
         $Address = $_POST['Address'];
+      
+      $operating_address = $_POST['operating_address'];
+      $gst_address = $_POST['gst_address'];
+      
         $City = $_POST['City'];
         $State = $_POST['State'];
         $State_Code = $_POST['State_Code'];
@@ -28,22 +32,22 @@ if ($type == 'delete') {
         $alternate_Mobile_No = $_POST['alternate_Mobile_No'];
         $E_mail = $_POST['alternate_Mobile_No'];
         $Website = $_POST['Website'];
-        // echo "select max('id') from `company`";
-        $cmp_id = mysqli_fetch_assoc(mysqli_query($conn, "select max(`id`) as `id` from `company`"))['id'];
+        // echo "select max('id') from `transporter`";
+        $cmp_id = mysqli_fetch_assoc(mysqli_query($conn, "select max(`id`) as `id` from `transporter`"))['id'];
 
 
         // echo "<pre>" ;
         // print_r($_POST);
         // exit();
 
-        // echo "INSERT INTO `company`(`Name`, `Address`, `City`, `State`, `State_Code`, `Pin_Code`, `Mobile_No`, `alternate_Mobile_No`, `E_mail`, `Website`) VALUES ('$Name','$Address','$City','$State','$State_Code','$Pin_Code','$Mobile_No','$alternate_Mobile_No','$E_mail','$Website')";exit();
+        // echo "INSERT INTO `transporter`(`Name`, `Address`, `City`, `State`, `State_Code`, `Pin_Code`, `Mobile_No`, `alternate_Mobile_No`, `E_mail`, `Website`) VALUES ('$Name','$Address','$City','$State','$State_Code','$Pin_Code','$Mobile_No','$alternate_Mobile_No','$E_mail','$Website')";exit();
         if ($id == '') {
-            mysqli_query($conn, "INSERT INTO `company`(`Name`, `Address`, `City`, `State`, `State_Code`, `Pin_Code`, `Mobile_No`, `alternate_Mobile_No`, `E_mail`, `Website`) VALUES ('$Name','$Address','$City','$State','$State_Code','$Pin_Code','$Mobile_No','$alternate_Mobile_No','$E_mail','$Website')");
+            mysqli_query($conn, "INSERT INTO `transporter`(`Name`, `Address`,`operating_address`,`gst_address`, `City`, `State`, `State_Code`, `Pin_Code`, `Mobile_No`, `alternate_Mobile_No`, `E_mail`, `Website`) VALUES ('$Name','$Address','$operating_address','$gst_address','$City','$State','$State_Code','$Pin_Code','$Mobile_No','$alternate_Mobile_No','$E_mail','$Website')");
 
-            $sql1 = "INSERT INTO `company_employee`(`employee_name`, `employee_number`, `employee_email`, `employee_designation`, `employee_ref_id`) VALUES ";
+            $sql1 = "INSERT INTO `transporter_employee`(`employee_name`, `employee_number`, `employee_email`, `employee_designation`, `employee_ref_id`) VALUES ";
             $rows = [];
 
-            $cmp_id = mysqli_fetch_assoc(mysqli_query($conn, "select max(`id`) as `id` from `company`"))['id'];
+            $cmp_id = mysqli_fetch_assoc(mysqli_query($conn, "select max(`id`) as `id` from `transporter`"))['id'];
 
             for ($i = 0; $i < count($_POST["employee_name"]); $i++) {
                 $rows[] = "( '{$_POST["employee_name"][$i]}','{$_POST["employee_number"][$i]}','{$_POST["employee_email"][$i]}','{$_POST["employee_designation"][$i]}','{$cmp_id}' )";
@@ -53,7 +57,7 @@ if ($type == 'delete') {
             if ($conn->query($sql1)) {
                 echo '<script>
         // alert("Data updated successfully"); 
-        window.location="company.php";</script>';
+        window.location="transporter.php";</script>';
             } else {
                 echo "Added Failed!!!";
             }
@@ -62,12 +66,12 @@ if ($type == 'delete') {
 
 
         
-        mysqli_query($conn, "UPDATE `company` SET `Name`='$Name',`Address`='$Address',`City`='$City',`State`='$State',`State_Code`='$State_Code',`Pin_Code`='$Pin_Code',`Mobile_No`='$Mobile_No',`alternate_Mobile_No`='$alternate_Mobile_No',`E_mail`='$E_mail',`Website`='$Website' where id='$id'");
+        mysqli_query($conn, "UPDATE `transporter` SET `Name`='$Name',`Address`='$Address',`City`='$City',`State`='$State',`State_Code`='$State_Code',`Pin_Code`='$Pin_Code',`Mobile_No`='$Mobile_No',`alternate_Mobile_No`='$alternate_Mobile_No',`E_mail`='$E_mail',`Website`='$Website' where id='$id'");
         
-        $del = mysqli_query($conn,"DELETE FROM `company_employee` where `employee_ref_id`='$id'");
+        $del = mysqli_query($conn,"DELETE FROM `transporter_employee` where `employee_ref_id`='$id'");
         if($del){            
         
-        $sql1 = "INSERT INTO `company_employee`(`employee_name`, `employee_number`, `employee_email`, `employee_designation`, `employee_ref_id`) VALUES ";
+        $sql1 = "INSERT INTO `transporter_employee`(`employee_name`, `employee_number`, `employee_email`, `employee_designation`, `employee_ref_id`) VALUES ";
         $rows = [];
         for ($i = 0; $i < count($_POST["employee_name"]); $i++) {
         $rows[] = "( '{$_POST["employee_name"][$i]}','{$_POST["employee_number"][$i]}','{$_POST["employee_email"][$i]}','{$_POST["employee_designation"][$i]}','{$cmp_id}' )";
@@ -76,13 +80,13 @@ if ($type == 'delete') {
         if ($conn->query($sql1)) {
             echo '<script>
             // alert("Data updated successfully"); 
-            window.location="company.php";</script>';
+            window.location="transporter.php";</script>';
         } else {
             echo "Added Failed!!!";
         }
         echo '<script>
         // alert("Data updated successfully"); 
-        window.location="company.php";</script>';
+        window.location="transporter.php";</script>';
     }
 }
     
@@ -93,11 +97,11 @@ if ($type == 'delete') {
     }
     if (isset($_GET['id'])) {
         $uid = $_GET['id'];
-        $data = mysqli_fetch_assoc(mysqli_query($conn, "select * from `company` where id='$uid'"));
+        $data = mysqli_fetch_assoc(mysqli_query($conn, "select * from `transporter` where id='$uid'"));
 
         $get_id = $data['employee_ref_id'];
 
-        $company_employee_result = mysqli_query($conn, "SELECT * FROM `company_employee` where `employee_ref_id`=$uid");
+        $company_employee_result = mysqli_query($conn, "SELECT * FROM `transporter_employee` where `employee_ref_id`=$uid");
     }
 }
 ?>
@@ -140,7 +144,7 @@ if ($type == 'delete') {
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>Manage Company</h2>
+                <h2>Manage transporter</h2>
             </div>
 
             <!-- Vertical Layout | With Floating Label -->
@@ -174,6 +178,21 @@ if ($type == 'delete') {
                                         <label class="form-label">Address</label>
                                     </div>
                                 </div>
+                              
+                              
+                              
+                              
+                              <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="text" id="operating_address" name="operating_address" class="form-control"
+                                            value="<?php echo @$data['operating_address']; ?>">
+                                        <label class="form-label">Operating Address</label>
+                                    </div>
+                                </div>
+                              
+                              
+                              
+                              
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -181,24 +200,52 @@ if ($type == 'delete') {
                                             value="<?php echo @$data['City']; ?>">
                                         <label class="form-label">City</label>
                                     </div>
-                                </div>
+                                </div>                                                            
+                              
+                                <!--<div class="form-group form-float">-->
+                                <!--    <div class="form-line">-->
+                                <!--        <input type="text" id="State" name="State" class="form-control"-->
+                                <!--            value="<?php echo @$data['State']; ?>">-->
+                                <!--        <label class="form-label">State Name</label>-->
+                                <!--    </div>-->
+                                <!--</div>-->
+                                
+                                
+                                 <div class="form-group form-float">
+                                    <div class="form-line">                                       
+                                        <select id="State" name="State" class="form-control" >
+                                            <option checked disabled>Select State</option>
 
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="State" name="State" class="form-control"
-                                            value="<?php echo @$data['State']; ?>">
-                                        <label class="form-label">State Name</label>
+                                            <option value="<?php echo @$data['State']; ?>"><?php echo @$data['State']; ?>
+                                            </option>
+                                            <?php 
+                                            $dat = mysqli_query($conn , "SELECT * FROM `state`");
+                                            while($row= mysqli_fetch_assoc($dat)){
+                                            ?>
+                                            <option value="<?php  echo $row['name']?>"><?php echo $row['name']?></option>
+                                            <?php } ?>
+                                        </select>
+                                        <label class="form-label">State</label>
                                     </div>
                                 </div>
+                                
+                                
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="State_Code" name="State_Code" class="form-control"
                                             value="<?php echo @$data['State_Code']; ?>">
-                                        <label class="form-label">State Code</label>
+                                        <label class="form-label">GST No</label>
                                     </div>
                                 </div>
 
+                              <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="text" id="gst_address" name="gst_address" class="form-control"
+                                            value="<?php echo @$data['gst_address']; ?>">
+                                        <label class="form-label">GST Address</label>
+                                    </div>
+                                </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="Pin_Code" name="Pin_Code" class="form-control"
@@ -219,7 +266,7 @@ if ($type == 'delete') {
                                     <div class="form-line">
                                         <input type="text" id="alternate_Mobile_No" name="alternate_Mobile_No"
                                             class="form-control" value="<?php echo @$data['alternate_Mobile_No']; ?>">
-                                        <label class="form-label">alternate_Mobile_No</label>
+                                        <label class="form-label">Whatsapp_No</label>
                                     </div>
                                 </div>
 
@@ -253,21 +300,21 @@ if ($type == 'delete') {
                                         <?php
 
                                         if (mysqli_fetch_row($company_employee_result) > 0) {
-                                            $company_employee_result = mysqli_query($conn, "SELECT * FROM `company_employee` where `employee_ref_id`=$uid");
+                                            $company_employee_result = mysqli_query($conn, "SELECT * FROM `transporter_employee` where `employee_ref_id`=$uid");
 
                                             while ($row = mysqli_fetch_assoc($company_employee_result)) { ?>
                                         <tr>
                                             <td><input class="form-control" type='text' name='employee_name[]'
-                                                    placeholder="employee_name" required
+                                                    placeholder="employee_name" 
                                                     value=<?= $row['employee_name'] ?>></td>
                                             <td><input class="form-control" type='text' name='employee_number[]'
-                                                    placeholder="employee_number" required
+                                                    placeholder="employee_number" 
                                                     value=<?= $row['employee_email'] ?>></td>
                                             <td><input class="form-control" type='text' name='employee_email[]'
                                                     placeholder="employee_email" value="<?= $row['employee_email'] ?>">
                                             </td>
                                             <td><input class="form-control" type='text' name='employee_designation[]'
-                                                    placeholder="employee_designation" required
+                                                    placeholder="employee_designation" 
                                                     value=<?= $row['employee_designation'] ?>></td>
                                             <td><input class="btn btn-success btn-sm" type='button' value='+'
                                                     onclick='add_row()'></td>
@@ -278,16 +325,16 @@ if ($type == 'delete') {
                                         } else { ?>
                                         <tr>
                                             <td><input class="form-control" type='text' name='employee_name[]'
-                                                    placeholder="employee_name" required
+                                                    placeholder="employee_name" 
                                                     value=<?= $row['employee_name'] ?>></td>
                                             <td><input class="form-control" type='text' name='employee_number[]'
-                                                    placeholder="employee_number" required
+                                                    placeholder="employee_number" 
                                                     value=<?= $row['employee_email'] ?>></td>
                                             <td><input class="form-control" type='text' name='employee_email[]'
                                                     placeholder="employee_email" value="<?= $row['employee_email'] ?>">
                                             </td>
                                             <td><input class="form-control" type='text' name='employee_designation[]'
-                                                    placeholder="employee_designation" required
+                                                    placeholder="employee_designation" 
                                                     value=<?= $row['employee_designation'] ?>></td>
                                             <td><input class="btn btn-success btn-sm" type='button' value='+'
                                                     onclick='add_row()'></td>
@@ -323,7 +370,7 @@ if ($type == 'delete') {
 function add_row() {
     var tr = document.createElement("tr");
     tr.innerHTML =
-        "<td><input type='text' class='form-control' placeholder='Contact person name' name='employee_name[]' required ></td> <td><input type='text'  placeholder='person phone' class='form-control' name='employee_number[]' required ></td> <td><input type='text'  placeholder='person phone2' class='form-control' name='employee_email[]' required ></td> <td><input type='text' class='form-control'  placeholder=' person Designation' name='employee_designation[]'  ></td> <td><input type='button' value='+' onclick='add_row()' class='btn btn-success btn-sm'></td> <td><input type='button' value='-' onclick='remove_row(this)' class='btn btn-danger btn-sm'></td>";
+        "<td><input type='text' class='form-control' placeholder='Contact person name' name='employee_name[]'  ></td> <td><input type='text'  placeholder='person phone' class='form-control' name='employee_number[]'  ></td> <td><input type='text'  placeholder='person phone2' class='form-control' name='employee_email[]'  ></td> <td><input type='text' class='form-control'  placeholder=' person Designation' name='employee_designation[]'  ></td> <td><input type='button' value='+' onclick='add_row()' class='btn btn-success btn-sm'></td> <td><input type='button' value='-' onclick='remove_row(this)' class='btn btn-danger btn-sm'></td>";
     document.getElementById("tbl").appendChild(tr);
 }
 

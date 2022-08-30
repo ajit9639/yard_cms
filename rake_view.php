@@ -9,6 +9,7 @@ $result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_assoc($result)) {
  
 // $output .= "<div class='row'><div class='col-sm-6'>Id: ".$row["id"]."</div><div class='col-sm-6'>Name ".$row["guest"]."</div></div><div class='row'> <div class='col-sm-6'>Gender: ".$row["journey_type"]."</div></div><div class='row'><div class='col-sm-6'>Designation: ".$row["total_km"]."</div><div class='col-sm-6'>age: ".$row["total_km"]."</div></div><div class='row'><div class='col-sm-12'></div></div>";
+
 $output .= 
 "<table class='table table-bordered display-tables'>"
 ."<tr>".
@@ -53,12 +54,33 @@ $output .=
 ."<tr>"
 ."</table>";
 
-
-
-
+ }
+ 
+ 
+ $sql = "SELECT * FROM `box_entry` where rake_ref_id=".$rec_id;
+$result = mysqli_query($conn, $sql);
+while($row = mysqli_fetch_assoc($result)) {
+ 
+ $output1 .= 
+"<table class='table table-bordered display-tables'>"
+."<tr>".
+"<th>"."Box No"."</th>".
+"<td>".$row["box_no"]."</td>"."</tr>"
+."<tr>"
+.
+"<th>"."Box Status"."</th>".
+"<td>".$row["box_status"]."</td>"."</tr>"
+."<tr>"
+.
+"<th>"."Gate Type"."</th>".
+"<td>".$row["gate_type"]."</td>"."</tr>"
+."<tr>"
+."</table>";
 
  }
+ 
 echo $output;
+echo $output1;
  
 mysqli_close($conn);
 ?>

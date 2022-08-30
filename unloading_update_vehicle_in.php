@@ -24,10 +24,6 @@ if(isset($_POST['submit_sender'])){
         echo "<script>alert('success');window.location.replace('unloading_vehicle_entry.php?id=$unid')</script>";
     }
 }
-
-
-
-
 ?>
 
 
@@ -77,24 +73,38 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="Vehicle_No" name="Vehicle_No" class="form-control"
-                                            value="<?php echo @$data['Vehicle_No']; ?>" required>
+                                            value="<?php echo @$data['Vehicle_No']; ?>" >
                                         <label class="form-label">Vehicle_No</label>
                                     </div>
                                 </div>
 
-                                <div class="form-group form-float">
+                              <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="vehicle_type" name="vehicle_type" class="form-control"
-                                            value="<?php echo @$data['vehicle_type']; ?>" required>
+                                        <!--<input type="text" id="vehicle_type" name="vehicle_type" class="form-control"
+                                            value="<?php echo @$data['vehicle_type']; ?>" >-->
+                                      <select id="vehicle_type" name="vehicle_type" class="form-control" >
+                                            <option disabled>Vehicle Type</option>
+                                            <option value="<?php echo $data['vehicle_type']; ?>" selected>
+                                                <?php echo @$data['vehicle_type']; ?>
+                                              <?php $dat = mysqli_query($conn , "SELECT * FROM `vehicle`");
+                                            while($row= mysqli_fetch_assoc($dat)){
+                                            ?>
+                                            <option value="<?php  echo $row['name']?>"><?php echo $row['name']?>
+                                            </option>
+                                            <?php } ?>
+                                        </select>
                                         <label class="form-label">vehicle_type</label>
                                     </div>
                                 </div>
+                              
+                              
+                             			 
                         
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="loading_slip_no" name="loading_slip_no" class="form-control"
-                                            value="<?php echo @$data['loading_slip_no']; ?>" required>
+                                            value="<?php echo @$data['loading_slip_no']; ?>" >
                                         <label class="form-label">loading_slip_no</label>
                                     </div>
                                 </div>
@@ -103,8 +113,8 @@ if(isset($_POST['submit_sender'])){
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Date" name="Date" class="form-control"
-                                            value="<?php echo @$data['Date']; ?>" required>
+                                        <input type="date" id="Date" name="Date" class="form-control"
+                                            value="<?php echo @$data['Date']; ?>" >
                                         <label class="form-label">Date</label>
                                     </div>
                                 </div> 
@@ -112,7 +122,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="Tare_Weight" name="Tare_Weight" class="form-control"
-                                            value="<?php echo @$data['Tare_Weight']; ?>" required>
+                                            value="<?php echo @$data['Tare_Weight']; ?>" >
                                         <label class="form-label">Tare_Weight</label>
                                     </div>
                                 </div> 
@@ -121,7 +131,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="kata_slip_no" name="kata_slip_no" class="form-control"
-                                            value="<?php echo @$data['kata_slip_no']; ?>" required>
+                                            value="<?php echo @$data['kata_slip_no']; ?>" >
                                         <label class="form-label">kata_slip_no</label>
                                     </div>
                                 </div> 
@@ -130,7 +140,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="D_License_No" name="D_License_No" class="form-control"
-                                            value="<?php echo @$data['D_License_No']; ?>" required>
+                                            value="<?php echo @$data['D_License_No']; ?>" >
                                         <label class="form-label">D_License_No</label>
                                     </div>
                                 </div> 
@@ -139,7 +149,7 @@ if(isset($_POST['submit_sender'])){
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="Remarks" name="Remarks" class="form-control"
-                                            value="<?php echo @$data['Remarks']; ?>" required>
+                                            value="<?php echo @$data['Remarks']; ?>" >
                                         <label class="form-label">Remarks</label>
                                     </div>
                                 </div>                             

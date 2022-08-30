@@ -2,7 +2,6 @@
 include_once('includes/check_login.php');
 include_once('includes/db.php');
 
-
 ?>
 
 <body class="theme-red">
@@ -46,7 +45,7 @@ include_once('includes/db.php');
                                 <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                                     <thead>
                                         <tr>
-
+                                            <th>SNO</th>
                                             <th>Name</th>
                                             <th>Address</th>
                                             <th>City</th>
@@ -64,13 +63,13 @@ include_once('includes/db.php');
 
                                     <tbody>
                                         <?php
-
+                                    $s =1;
                                     $sql=mysqli_query($conn,"select * from `transporter`");
                                     while($row=mysqli_fetch_assoc($sql))
                                     {
                                     ?>
                                         <tr>
-
+                                            <th><?php echo $s; ?></th>
                                             <th><?php echo $row['Name']; ?></th>
                                             <th><?php echo $row['Address']; ?></th>
                                             <th><?php echo $row['City']; ?></th>
@@ -95,7 +94,9 @@ include_once('includes/db.php');
                                             </td>
                                         </tr>
 
-                                        <?php } ?>
+                                        <?php 
+                                        $s++;
+                                        } ?>
 
                                     </tbody>
                                 </table>

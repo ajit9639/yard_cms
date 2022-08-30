@@ -30,8 +30,10 @@ $Bank_Name = $_POST['Bank_Name'];
 $AC_No = $_POST['AC_No'];
 $AC_Name = $_POST['AC_Name'];
 $IFSC_Code = $_POST['IFSC_Code'];
-$Aadhar_Card = $_POST['Aadhar_Card'];
-$Certificate = $_POST['Certificate'];
+//$Aadhar_Card = $_POST['Aadhar_Card'];
+  $Aadhar_Card = "adhar";
+//$Certificate = $_POST['Certificate'];
+  $Certificate = "certificate";
 
 
 // echo "INSERT INTO `driver`(`Name`, `DL_Type`, `DL_No`, `DL_Validity`, `City`, `Address`, `Mobile_No`, `Emergency_Contact_No`, `Bank_Name`, `AC_No`, `AC_Name`, `IFSC_Code`, `Aadhar_Card`, `Certificate`) VALUES 
@@ -103,28 +105,51 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Name" name="Name" class="form-control" required
+                                        <input type="text" id="Name" name="Name" class="form-control" 
                                             value="<?php echo @$data['Name']; ?>">
                                         <label class="form-label">Driver Name</label>
                                     </div>
                                 </div>
+                                
+                                <!--<div class="form-group form-float">-->
+                                <!--    <div class="form-line">-->
+                                <!--        <input type="text" id="DL_Type" name="DL_Type" class="form-control" -->
+                                <!--            value="<?php echo @$data['DL_Type']; ?>">-->
+                                <!--        <label class="form-label">Driver DL_Type</label>-->
+                                <!--    </div>-->
+                                <!--</div>-->
+                                
+                                
+                                
                                 <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="DL_Type" name="DL_Type" class="form-control" required
-                                            value="<?php echo @$data['DL_Type']; ?>">
-                                        <label class="form-label">Driver DL_Type</label>
+                                    <div class="form-line">                                       
+                                        <select id="DL_Type" name="DL_Type" class="form-control" >
+                                            <option checked disabled>Select DL Type</option>
+
+                                            <option value="<?php echo @$data['DL_Type']; ?>"><?php echo @$data['DL_Type']; ?>
+                                            </option>
+                                            <?php 
+                                            $dat = mysqli_query($conn , "SELECT * FROM `dl_type`");
+                                            while($row= mysqli_fetch_assoc($dat)){
+                                            ?>
+                                            <option value="<?php  echo $row['name']?>"><?php echo $row['name']?></option>
+                                            <?php } ?>
+                                        </select>
+                                        <label class="form-label">DL Type</label>
                                     </div>
                                 </div>
+                                
+                                
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="DL_No" name="DL_No" class="form-control" required
+                                        <input type="text" id="DL_No" name="DL_No" class="form-control" 
                                             value="<?php echo @$data['DL_No']; ?>">
                                         <label class="form-label">Driver DL_No</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="DL_Validity" name="DL_Validity" class="form-control" required
+                                        <input type="text" id="DL_Validity" name="DL_Validity" class="form-control" 
                                             value="<?php echo @$data['DL_Validity']; ?>">
                                         <label class="form-label">Driver DL_Validity</label>
                                     </div>
@@ -132,7 +157,7 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="City" name="City" class="form-control" required
+                                        <input type="text" id="City" name="City" class="form-control" 
                                             value="<?php echo @$data['City']; ?>">
                                         <label class="form-label">Driver City</label>
                                     </div>
@@ -140,21 +165,21 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Address" name="Address" class="form-control" required
+                                        <input type="text" id="Address" name="Address" class="form-control" 
                                             value="<?php echo @$data['Address']; ?>">
                                         <label class="form-label">Driver Address</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Mobile_No" name="Mobile_No" class="form-control" required
+                                        <input type="text" id="Mobile_No" name="Mobile_No" class="form-control" 
                                             value="<?php echo @$data['Mobile_No']; ?>">
                                         <label class="form-label">Driver Mobile No</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Emergency_Contact_No" name="Emergency_Contact_No" class="form-control" required
+                                        <input type="text" id="Emergency_Contact_No" name="Emergency_Contact_No" class="form-control" 
                                             value="<?php echo @$data['Emergency_Contact_No']; ?>">
                                         <label class="form-label">Driver Emergency_Contact_No</label>
                                     </div>
@@ -162,47 +187,47 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Bank_Name" name="Bank_Name" class="form-control" required
+                                        <input type="text" id="Bank_Name" name="Bank_Name" class="form-control" 
                                             value="<?php echo @$data['Bank_Name']; ?>">
                                         <label class="form-label">Driver Bank_Name</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="AC_No" name="AC_No" class="form-control" required
+                                        <input type="text" id="AC_No" name="AC_No" class="form-control" 
                                             value="<?php echo @$data['AC_No']; ?>">
                                         <label class="form-label">Driver AC_No</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="AC_Name" name="AC_Name" class="form-control" required
+                                        <input type="text" id="AC_Name" name="AC_Name" class="form-control" 
                                             value="<?php echo @$data['AC_Name']; ?>">
                                         <label class="form-label">Driver AC_Name</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="IFSC_Code" name="IFSC_Code" class="form-control" required
+                                        <input type="text" id="IFSC_Code" name="IFSC_Code" class="form-control" 
                                             value="<?php echo @$data['IFSC_Code']; ?>">
                                         <label class="form-label">Driver IFSC_Code</label>
                                     </div>
                                 </div>
 
-                                <div class="form-group form-float">
+                                <!--<div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Aadhar_Card" name="Aadhar_Card" class="form-control" required
+                                        <input type="text" id="Aadhar_Card" name="Aadhar_Card" class="form-control" 
                                             value="<?php echo @$data['Aadhar_Card']; ?>">
                                         <label class="form-label">Driver Aadhar_Card</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Certificate" name="Certificate" required
+                                        <input type="text" id="Certificate" name="Certificate" 
                                             class="form-control" value="<?php echo @$data['Certificate']; ?>">
                                         <label class="form-label">Driver Certificate</label>
                                     </div>
-                                </div>
+                                </div>-->
                                                     
 
                                 <br />

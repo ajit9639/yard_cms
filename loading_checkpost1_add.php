@@ -80,14 +80,14 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$rake_open_data['Company']; ?>" required>
+                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$rake_open_data['Company']; ?>" >
                                         <label class="form-label">Company</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$rake_open_data['RR_Date']; ?>" required>
+                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$rake_open_data['RR_Date']; ?>" >
                                         <label class="form-label">IN Date</label>
                                     </div>
                                 </div>
@@ -95,7 +95,7 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$rake_open_data['RR_No	']; ?>" required>
+                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$rake_open_data['RR_No	']; ?>" >
                                         <label class="form-label">RR No</label>
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$rake_open_data['Transporter']; ?>" required>
+                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$rake_open_data['Transporter']; ?>" >
                                         <label class="form-label">Transporter</label>
                                     </div>
                                 </div>
@@ -111,7 +111,7 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$rake_open_data['Material']; ?>" required>
+                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$rake_open_data['Material']; ?>" >
                                         <label class="form-label">Material</label>
                                     </div>
                                 </div>
@@ -119,7 +119,7 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$data['name']; ?>" required>
+                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$data['name']; ?>" >
                                         <label class="form-label">Vehicle No</label>
                                     </div>
                                 </div>
@@ -127,14 +127,14 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$data['name']; ?>" required>
+                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$data['name']; ?>" >
                                         <label class="form-label">Date</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$data['loading_slip_no']; ?>" required>
+                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$data['loading_slip_no']; ?>" >
                                         <label class="form-label">Loading Slip No</label>
                                     </div>
                                 </div>
@@ -142,7 +142,7 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$data['name']; ?>" required>
+                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$data['name']; ?>" >
                                         <label class="form-label">Tare Weight</label>
                                     </div>
                                 </div>
@@ -151,7 +151,7 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$data['name']; ?>" required>
+                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$data['name']; ?>" >
                                         <label class="form-label">KATA Slip No</label>
                                     </div>
                                 </div>
@@ -160,7 +160,7 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$data['name']; ?>" required>
+                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$data['name']; ?>" >
                                         <label class="form-label">D. License No</label>
                                     </div>
                                 </div>
@@ -169,7 +169,7 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$data['name']; ?>" required>
+                                        <input type="text" id="name" name="name" class="form-control" value="<?php echo @$data['name']; ?>" >
                                         <label class="form-label">Remarks</label>
                                     </div>
                                 </div>

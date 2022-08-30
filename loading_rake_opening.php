@@ -54,7 +54,7 @@ include_once('includes/db.php');
                                 <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                                     <thead>
                                         <tr>
-                                            
+                                            <th>SNO</th>
                                             <th>Order_no</th>
                                             <th>Opening_date</th>
                                             
@@ -71,13 +71,13 @@ include_once('includes/db.php');
 
                                     <tbody>
                                         <?php
-
+                                    $s=1;
                                     $sql=mysqli_query($conn,"SELECT * FROM `loading_rake_opening`");
                                     while($row=mysqli_fetch_assoc($sql))
                                     {
                                     ?>
                                         <tr>
-                                           
+                                            <td><?php echo $s; ?></td>
                                             <td><?php echo $row['Order_no']; ?></td>
                                             <td><?php echo $row['Opening_date']; ?></td>
                                             <td><?php echo $row['Material']; ?></td>
@@ -110,7 +110,7 @@ include_once('includes/db.php');
                                             </td>
                                         </tr>
 
-                                        <?php } ?>
+                                        <?php $s++; } ?>
 
                                     </tbody>
                                 </table>

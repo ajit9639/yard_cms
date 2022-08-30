@@ -54,6 +54,7 @@ include_once('includes/db.php');
                                 <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                                     <thead>
                                         <tr>
+                                            <th>SNO</th>
                                             <th>Name</th>
                                             <th>DL_Type</th>
                                             <th>DL_No</th>
@@ -66,8 +67,8 @@ include_once('includes/db.php');
                                             <th>AC_No</th>
                                             <th>AC_Name</th>
                                             <th>IFSC_Code</th>
-                                            <th>Aadhar_Card</th>
-                                            <th>Certificate</th>
+                                            <!--<th>Aadhar_Card</th>
+                                            <th>Certificate</th>-->
 
 
 
@@ -79,13 +80,13 @@ include_once('includes/db.php');
 
                                     <tbody>
                                         <?php
-
+                                    $s =1;
                                     $sql=mysqli_query($conn,"select * from `driver`");
                                     while($row=mysqli_fetch_assoc($sql))
                                     {
                                     ?>
                                         <tr>
-
+                                            <th><?php echo $s; ?></th>
                                             <th><?php echo $row['Name']; ?></th>
                                             <th><?php echo $row['DL_Type']; ?></th>
                                             <th><?php echo $row['DL_No']; ?></th>
@@ -98,8 +99,8 @@ include_once('includes/db.php');
                                             <th><?php echo $row['AC_No']; ?></th>
                                             <th><?php echo $row['AC_Name']; ?></th>
                                             <th><?php echo $row['IFSC_Code']; ?></th>
-                                            <th><?php echo $row['Aadhar_Card']; ?></th>
-                                            <th><?php echo $row['Certificate']; ?></th>
+                                            <!--<th><?php echo $row['Aadhar_Card']; ?></th>
+                                            <th><?php echo $row['Certificate']; ?></th>-->
                                             
 
                                             <td class="action">
@@ -114,7 +115,7 @@ include_once('includes/db.php');
                                             </td>
                                         </tr>
 
-                                        <?php } ?>
+                                        <?php $s++;} ?>
 
                                     </tbody>
                                 </table>

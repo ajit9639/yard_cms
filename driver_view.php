@@ -62,14 +62,6 @@ $output .=
 "<th>"."IFSC_Code"."</th>".
 "<td>".$row["IFSC_Code"]."</td>"."</tr>"
 ."<tr>"
-.
-"<th>"."Aadhar_Card"."</th>".
-"<td>".$row["Aadhar_Card"]."</td>"."</tr>"
-."<tr>"
-.
-"<th>"."Certificate"."</th>".
-"<td>".$row["Certificate"]."</td>"."</tr>"
-."<tr>"
 
 ."</table>";
 

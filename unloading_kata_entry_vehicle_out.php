@@ -31,14 +31,14 @@
                     <div class="card" id="card">
                         <div class="header">
                             <h2 class="text-center">
-                                Vehicle Out
-                            </h2>
-                            <?php
-                            $query1 = mysqli_query($conn ,"SELECT count(`vehicle_no`) as lsno1 FROM `unloading_vehicle_out_temp` WHERE `unloading_ref_id` = '$id'");
-                            $result2 = mysqli_fetch_assoc($query1);
-                            $x1 = $result2['lsno1']
+                             <?php                            							 
+                           $count = mysqli_fetch_assoc(mysqli_query($conn,"select COUNT(`id`) as 'cid' from `unloading_vehicle_out_temp` where `unloading_ref_id`='$id' AND `kata_status`='2'"));
+                           $d = $count['cid'];
                             ?>
-                            <h2 class="text-white">Total Vehicle : <?= $x1 ;?></h2>
+                                Vehicle Out : <?= $d ?>
+                            </h2>
+                            
+                            <!--<h2 class="text-white">Total Vehicle : <?= $x1 ;?></h2>-->
                             <!-- <ul class="header-dropdown m-r--5">
                             <li class="dropdown">
                                 <a href="unloading_checkpost1_add.php">
@@ -53,15 +53,15 @@
                                 <table class="table table-bordered table-striped table-hover">
                                     <thead>
                                         <tr>
-                                            <th>T. Challan No.</th>
+                                            <th>SNO</th>
                                             <th>Vehicle No.</th>
                                             <th>Vehicle Type</th>
-                                            <th>Challan No.</th>
+                                            <!--<th>T Challan No.</th>-->
                                             <th>Tare Wt.</th>
                                             <th>Gross Wt.</th>
                                             <th>Net Wt.</th>
                                             <th>Status</th>
-                                            <!-- <th>Action</th> -->
+                                             <th>Action</th> 
                                             
                                             <!-- <th>Vehicle Entry</th>
                                         <th>Kata Entry</th> -->
@@ -71,32 +71,33 @@
                                     </thead>
 
                                     <tbody>
-                                        <?php
-
-$row=mysqli_fetch_assoc(mysqli_query($conn,"select * from `unloading_vehicle_in_temp` where `unloading_ref_id`='$id' AND `kata_status`='1'"));
-$row1=mysqli_fetch_assoc(mysqli_query($conn,"select * from `unloading_vehicle_kata_entry_in` where `unloading_ref_id`='$id' "));
-                               
+                                       <?php
+                                       $s=1;
+                           $d = mysqli_query($conn ,"select * from `unloading_vehicle_out_temp` where `unloading_ref_id`='$id' AND `kata_status`='2'");
+                            while($result2 = mysqli_fetch_assoc($d)){
+                            ?>
                                 
-                                ?>
-
+                             
                                         <tr>
-                                            <td></td>
-                                            <td><?php echo $row['Vehicle_No']; ?></td>
-                                            <td></td>
-                                            <td><?php echo $row1['challn_no']; ?></td>
-                                            <td><?php echo $row1['tare_weight']; ?></td>
+                                            <td><?php echo $s; ?></td>
+                                            <td><?php echo $result2['vehicle_no']; ?></td>
+                                          <td><?php echo $result2['vehicle_type']; ?></td>
+                                            
+                                            <!--<td><?php // echo $result2['challn_no']; ?></td>-->
+                                            <td><?php echo $result2['tare_weight']; ?></td>
 
-                                            <td><?php echo $row1['gross_weight']; ?></td>
-                                            <td></td>
+                                            <td><?php echo $result2['gross_weight']; ?></td>
+                                            <td><?php echo $result2['gross_weight'] - $result2['tare_weight']; ?></td>
                                             
                                             <td><button class="btn btn-success btn-sm">OUT</button></td>
-                                            <!-- <td class="action">                                               
-                                                <a href='unloading_vehicle_entry.php?id=<?php echo $row["id"] ?>&type=outdelete'
-                                                    class="get_id"><i class="material-icons">delete</i></a>                                               
-                                            </td> -->
+                                             <td>
+                                              <a href="unloading_out_vehicle_action.php?id=<?php echo $result2['id'];?>"><i class="material-icons">edit</i></a>
+                                               <a href='unloading_delete_vehicle.php?id=<?php echo $result2["id"] ?>&types="vehicleout"'
+                                               <i class="material-icons">delete</i></a>
+                                          </td>    
                                         </tr>
 
-                                        <?php //} ?>
+                                        <?php $s++; } ?>
 
                                     </tbody>
                                 </table>

@@ -110,28 +110,46 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Vehicle_No" name="Vehicle_No" class="form-control" required
+                                        <input type="text" id="Vehicle_No" name="Vehicle_No" class="form-control" 
                                             value="<?php echo @$data['Vehicle_No']; ?>">
                                         <label class="form-label">Vehicle Number</label>
                                     </div>
                                 </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="Vehicle_Type" name="Vehicle_Type" class="form-control" required
-                                            value="<?php echo @$data['Vehicle_Type']; ?>">
+                              
+                              
+                              
+                              <div class="form-group form-float">
+                                    <div class="form-line focused">
+                                        <select id="editable-select" name="Vehicle_Type" class="form-control" >
+                                            <option disabled>Vehicle Type</option>
+                                            <option value="<?php echo $data['Vehicle_Type']; ?>" selected>
+                                                <?php echo @$data['Vehicle_Type']; ?>
+
+                                                <?php 
+                                            $dat = mysqli_query($conn , "SELECT * FROM `vehicle`");
+                                            while($row= mysqli_fetch_assoc($dat)){
+                                            ?>
+                                            <option value="<?php  echo $row['name']?>"><?php echo $row['name']?>
+                                            </option>
+                                            <?php } ?>
+                                        </select>
+
                                         <label class="form-label">Vehicle Type</label>
                                     </div>
                                 </div>
+                              
+                              
+                               
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Regn_Address" name="Regn_Address" class="form-control" required
+                                        <input type="text" id="Regn_Address" name="Regn_Address" class="form-control" 
                                             value="<?php echo @$data['Regn_Address']; ?>">
                                         <label class="form-label">Vehicle Regn Address</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Owner_Name" name="Owner_Name" class="form-control" required
+                                        <input type="text" id="Owner_Name" name="Owner_Name" class="form-control" 
                                             value="<?php echo @$data['Owner_Name']; ?>">
                                         <label class="form-label">Vehicle Owner Name</label>
                                     </div>
@@ -139,7 +157,7 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Owner_Address" name="Owner_Address" class="form-control" required
+                                        <input type="text" id="Owner_Address" name="Owner_Address" class="form-control" 
                                             value="<?php echo @$data['Owner_Address']; ?>">
                                         <label class="form-label">Vehicle Owner Address</label>
                                     </div>
@@ -147,21 +165,21 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Owner_PAN" name="Owner_PAN" class="form-control" required
+                                        <input type="text" id="Owner_PAN" name="Owner_PAN" class="form-control" 
                                             value="<?php echo @$data['Owner_PAN']; ?>">
                                         <label class="form-label">Vehicle Owner PAN No</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Mobile_No" name="Mobile_No" class="form-control" required
+                                        <input type="text" id="Mobile_No" name="Mobile_No" class="form-control" 
                                             value="<?php echo @$data['name']; ?>">
                                         <label class="form-label">Vehicle Mobile No</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Mobile_No2" name="Mobile_No2" class="form-control" required
+                                        <input type="text" id="Mobile_No2" name="Mobile_No2" class="form-control" 
                                             value="<?php echo @$data['Mobile_No2']; ?>">
                                         <label class="form-label">Vehicle alternate Mobile No</label>
                                     </div>
@@ -169,28 +187,28 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Engine_No" name="Engine_No" class="form-control" required
+                                        <input type="text" id="Engine_No" name="Engine_No" class="form-control" 
                                             value="<?php echo @$data['Engine_No']; ?>">
                                         <label class="form-label">Vehicle Engine No</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Chassis_No" name="Chassis_No" class="form-control" required
+                                        <input type="text" id="Chassis_No" name="Chassis_No" class="form-control" 
                                             value="<?php echo @$data['Chassis_No']; ?>">
                                         <label class="form-label">Vehicle Chassis No</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Year" name="Year" class="form-control" required
+                                        <input type="text" id="Year" name="Year" class="form-control" 
                                             value="<?php echo @$data['Year']; ?>">
                                         <label class="form-label">Vehicle Year</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Capacity" name="Capacity" class="form-control" required
+                                        <input type="text" id="Capacity" name="Capacity" class="form-control" 
                                             value="<?php echo @$data['Capacity']; ?>">
                                         <label class="form-label">Vehicle Capacity</label>
                                     </div>
@@ -198,35 +216,35 @@ if(isset($_GET['id']))
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Permit_No" name="Permit_No" class="form-control" required
+                                        <input type="text" id="Permit_No" name="Permit_No" class="form-control" 
                                             value="<?php echo @$data['Permit_No']; ?>">
                                         <label class="form-label">Vehicle Permit No</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Permit_Valid_Date" name="Permit_Valid_Date" required
+                                        <input type="text" id="Permit_Valid_Date" name="Permit_Valid_Date" 
                                             class="form-control" value="<?php echo @$data['Permit_Valid_Date']; ?>">
                                         <label class="form-label">Vehicle Permit Valid Date</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Insurance_No" name="Insurance_No" class="form-control" required
+                                        <input type="text" id="Insurance_No" name="Insurance_No" class="form-control" 
                                             value="<?php echo @$data['Insurance_No']; ?>">
                                         <label class="form-label">Vehicle Insurance No</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Insurance_Valid_Date" name="Insurance_Valid_Date" required
+                                        <input type="text" id="Insurance_Valid_Date" name="Insurance_Valid_Date" 
                                             class="form-control" value="<?php echo @$data['Insurance_Valid_Date']; ?>">
                                         <label class="form-label">Vehicle Insurance Valid Date</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Insurance_Company_Name" name="Insurance_Company_Name" required
+                                        <input type="text" id="Insurance_Company_Name" name="Insurance_Company_Name" 
                                             class="form-control"
                                             value="<?php echo @$data['Insurance_Company_Name']; ?>">
                                         <label class="form-label">Vehicle Insurance Company Name</label>
@@ -234,56 +252,56 @@ if(isset($_GET['id']))
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Pollution_No" name="Pollution_No" class="form-control" required
+                                        <input type="text" id="Pollution_No" name="Pollution_No" class="form-control" 
                                             value="<?php echo @$data['Pollution_No']; ?>">
                                         <label class="form-label">Vehicle Pollution No</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Pollution_Valid_Date" name="Pollution_Valid_Date" required
+                                        <input type="text" id="Pollution_Valid_Date" name="Pollution_Valid_Date" 
                                             class="form-control" value="<?php echo @$data['Pollution_Valid_Date']; ?>">
                                         <label class="form-label">Vehicle Pollution Valid Date</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Tax_Token_No" name="Tax_Token_No" class="form-control" required
+                                        <input type="text" id="Tax_Token_No" name="Tax_Token_No" class="form-control" 
                                             value="<?php echo @$data['Tax_Token_No']; ?>">
                                         <label class="form-label">Vehicle Tax Token No</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Tax_Valid_Date" name="Tax_Valid_Date" required
+                                        <input type="text" id="Tax_Valid_Date" name="Tax_Valid_Date" 
                                             class="form-control" value="<?php echo @$data['Tax_Valid_Date']; ?>">
                                         <label class="form-label">Vehicle Tax Valid Date</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="HPA" name="HPA" class="form-control" required
+                                        <input type="text" id="HPA" name="HPA" class="form-control" 
                                             value="<?php echo @$data['HPA']; ?>">
                                         <label class="form-label">Vehicle HPA</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Fitness_Date" name="Fitness_Date" class="form-control" required
+                                        <input type="text" id="Fitness_Date" name="Fitness_Date" class="form-control" 
                                             value="<?php echo @$data['Fitness_Date']; ?>">
                                         <label class="form-label">Vehicle Fitness Date</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Local_Permit_Area" name="Local_Permit_Area" required
+                                        <input type="text" id="Local_Permit_Area" name="Local_Permit_Area" 
                                             class="form-control" value="<?php echo @$data['Local_Permit_Area']; ?>">
                                         <label class="form-label">Vehicle Local Permit Area</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="Local_Permit_Valid_Date" name="Local_Permit_Valid_Date" required
+                                        <input type="text" id="Local_Permit_Valid_Date" name="Local_Permit_Valid_Date" 
                                             class="form-control"
                                             value="<?php echo @$data['Local_Permit_Valid_Date']; ?>">
                                         <label class="form-label">Vehicle Local_Permit_Valid_Date</label>
@@ -299,10 +317,20 @@ if(isset($_GET['id']))
 
                                 <button class="btn btn-primary waves-effect submit_sender" name="submit_sender"
                                     type="submit">SUBMIT</button>
+                              
+                              
+                              
+                              <a href="" class="btn btn-success">Check Licence</a>
+                              <a href="" class="btn btn-danger">Check Insurance</a>
                             </form>
-                        </div>
-                    </div>
-                </div>
+                        </div>                     
+                    </div>  
+                  
+                  
+               
+                  
+                  
+                </div>              
             </div>
             <!-- Vertical Layout | With Floating Label -->
 

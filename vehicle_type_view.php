@@ -5,7 +5,7 @@ $sql = "SELECT * FROM `vehicle` where id=".$rec_id;
 $result = mysqli_query($conn, $sql);
 
  
-
+// echo $sql;
 while($row = mysqli_fetch_assoc($result)) {
  
 // $output .= "<div class='row'><div class='col-sm-6'>Id: ".$row["id"]."</div><div class='col-sm-6'>Name ".$row["guest"]."</div></div><div class='row'> <div class='col-sm-6'>Gender: ".$row["journey_type"]."</div></div><div class='row'><div class='col-sm-6'>Designation: ".$row["total_km"]."</div><div class='col-sm-6'>age: ".$row["total_km"]."</div></div><div class='row'><div class='col-sm-12'></div></div>";

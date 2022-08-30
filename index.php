@@ -1,4 +1,5 @@
 <?php include_once('includes/header.php');
+include_once('config.php');
 if(isset($_SESSION['uid']) && ($_SESSION['uid'] != ''))
 {
     echo '<script>window.location="dashboard.php";</script>';
@@ -42,18 +43,13 @@ if(isset($_POST['submit']))
 }
 ?>
 
-<body class="login-page" style="
-    background: url(images/bg.jpg)!important;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-">
+<body class="login-page">
 
 <!-- pre loader -->
-<div class="loader-container">
-        <!-- <div class="loader"></div> -->
-        <img src="images/header1.png" style="width:80vh"/>
-    </div>
+<!--<div class="loader-container">-->
+       
+<!--        <img src="images/header1.png" style="width:80vh"/>-->
+<!--    </div>-->
 	<!-- // pre loader -->
 
     <div class="login-box">
@@ -64,7 +60,7 @@ if(isset($_POST['submit']))
             <div class="body">
                 <form id="sign_in" method="POST" action="#">
                     <div class="msg">Sign in to start your session</div>
-                    <div class="input-group">
+                    <div class="input-group" style="background: #fff;">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>
                         </span>
@@ -72,7 +68,7 @@ if(isset($_POST['submit']))
                             <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
                         </div>
                     </div>
-                    <div class="input-group">
+                    <div class="input-group" style="background: #fff;">
                         <span class="input-group-addon">
                             <i class="material-icons">lock</i>
                         </span>

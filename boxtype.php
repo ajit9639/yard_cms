@@ -38,7 +38,7 @@ include_once('includes/db.php');
                     <div class="card" id="card">
                         <div class="header">
                             <h2 class="text-center">
-                                Vehicle
+                                Box Type
                             </h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
@@ -54,6 +54,7 @@ include_once('includes/db.php');
                                 <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                                     <thead>
                                         <tr>
+                                            <th>SNO</th>
                                             <th>Box type Name</th>
                                            
                                             <th>Action</th>
@@ -62,12 +63,13 @@ include_once('includes/db.php');
 
                                     <tbody>
                                     <?php
-
+                                    $s=1;
                                     $sql=mysqli_query($conn,"select * from `boxtype`");
                                     while($row=mysqli_fetch_assoc($sql))
                                     {
                                     ?>
                                         <tr>
+                                            <td><?php echo $s; ?></td>
                                             <td><?php echo $row['name']; ?></td>                                                                                       
                                             
                                             <td class="action">   
@@ -78,7 +80,7 @@ include_once('includes/db.php');
                                         </td>
                                         </tr>
 
-                                    <?php } ?>
+                                    <?php $s++;} ?>
 
                                     </tbody>
                                 </table>
